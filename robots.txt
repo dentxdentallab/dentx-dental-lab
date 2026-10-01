@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# AI assistants and search crawlers are welcome to read the lab's public facts.
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.dentxdentallab.com/sitemap.xml

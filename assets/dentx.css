@@ -1,0 +1,54 @@
+/* DentX overrides on top of the Codex site.css: real logo, metallic gold, turnaround & prices ledger. */
+:root{--gold:#d4ae5c}
+
+/* real logo */
+.brand img{height:58px;width:auto}
+.hero-title h1{margin-top:26px;font-size:0;line-height:0}
+.hero-title h1 img{height:clamp(150px,30vh,330px);width:auto;max-width:44vw}
+.lock-mark img{width:100%;height:auto}
+.contact-mark img{height:120px;width:auto}
+.hero-bottom span.ig:before{content:none}
+
+/* ledger */
+.ledger{padding:120px var(--gutter) 110px}
+.ledger-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px;margin-bottom:56px}
+.ledger-head p{color:#4a5d7e;font-size:17px;max-width:44ch}
+.eyebrow.dark{color:#8a6a24}
+.ledger-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.ledger table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.ledger caption{text-align:left;font-size:27px;letter-spacing:-.03em;font-weight:500;padding-bottom:16px}
+.ledger th{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:#5c6f8f;font-weight:600;text-align:left;padding:10px 0;border-bottom:2px solid var(--navy)}
+.ledger th:not(:first-child),.ledger td:not(:first-child){text-align:right;white-space:nowrap}
+.ledger td{padding:14px 0;border-bottom:1px solid #071a3d1f;font-size:17px;vertical-align:baseline}
+.ledger td:first-child{padding-right:12px}
+.ledger td small{display:block;font-size:13px;color:#5c6f8f;margin-top:2px}
+.ledger td.d{color:var(--blue);font-weight:600;padding-left:16px}
+.ledger td.p{font-weight:600;padding-left:22px;width:1%}
+.ledger .rush{color:#8a6a24;font-weight:600}
+.ledger table+table{margin-top:48px}
+.pickup-strip{margin-top:56px;display:flex;flex-wrap:wrap;gap:16px 40px;align-items:center;justify-content:space-between;background:var(--navy);color:var(--white);padding:26px 32px;border-radius:3px}
+.pickup-strip strong{font-size:22px;letter-spacing:-.02em;font-weight:500}
+.pickup-strip span{color:#cedbf0;font-size:15px}
+
+/* phone */
+@media (max-width:680px){
+  .brand img{height:44px}
+  .hero-title h1 img{width:68vw;height:auto;max-width:none}
+  .hero-product{top:300px}
+  .contact-mark img{height:86px}
+  .ledger{padding:80px 20px 70px}
+  .ledger-grid{grid-template-columns:1fr;gap:48px}
+  .ledger td{font-size:16px}
+  .pickup-strip{padding:22px 20px}
+}
+
+/* FAQ */
+.faq{padding:110px var(--gutter) 100px;border-top:1px solid #071a3d1f}
+.faq-list{max-width:900px}
+.faq details{border-bottom:1px solid #071a3d24}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:24px;padding:22px 0;font-size:21px;letter-spacing:-.02em;font-weight:500}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';color:#8a6a24;font-size:26px;line-height:1;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:#3d5070;font-size:17px}
+@media (max-width:680px){.faq{padding:80px 20px 70px}.faq summary{font-size:18px}}
