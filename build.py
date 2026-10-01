@@ -135,7 +135,7 @@ PAGES = {
         desc="Meet Haibert Aivazian, licensed owner of DentX Dental Lab, in business since 2008. He does the shade matching himself. Published prices, 5-day crowns, shipping nationwide.",
         h1="Meet Haibert Aivazian.<br><em>Owner of DentX.</em>",
         lead="Licensed, in business since 2008, and still at the bench. When you send a case to DentX, you know whose hands it's in.",
-        cats=[], img="owner-haibert-shade.webp", img_alt="Haibert Aivazian, owner of DentX Dental Lab, checking a crown against a shade guide at his bench",
+        cats=[], img="owner-haibert.webp", img_alt="Haibert Aivazian, owner of DentX Dental Lab, in DentX scrubs",
         body=[
             ("Since 2008", "Haibert has been in business since 2008. In that time dentistry moved from impressions to intraoral scans, and DentX takes both."),
             ("Shade, in person", "Haibert does the shade matching himself, free for every client. Send a photo under daylight, or bring your patient to the Tarzana lab and he'll match it with you there."),
@@ -167,7 +167,7 @@ def _min(css):
 CSS = _min("".join(open(f"assets/{n}").read() for n in ("scrollcraft.css", "site.css", "dentx.css"))).replace("url(fonts/", "url(/assets/fonts/")
 
 def img(name, alt, sizes="(max-width:680px) 92vw, 50vw", extra="", w=1400, h=933):
-    return (f'<img src="/assets/{name}.webp" srcset="/assets/{name}-480.webp 480w, /assets/{name}-800.webp 800w, /assets/{name}.webp 1400w" '
+    return (f'<img src="/assets/{name}.webp" srcset="/assets/{name}-480.webp 480w, /assets/{name}-800.webp 800w, /assets/{name}.webp {w}w" '
             f'sizes="{sizes}" alt="{alt}" width="{w}" height="{h}" {extra}>')
 e = html.escape
 def svg_logo(cls=""):
@@ -302,7 +302,7 @@ def footer():
   <div class="contact-top">
     <div class="contact-mark">{svg_logo()}</div>
     <h2>Contact us <em>today.</em></h2>
-    <p class="contact-who"><img src="/assets/owner-haibert-480.webp" alt="" width="480" height="600" loading="lazy">You'll talk to Haibert directly.</p>
+    <p class="contact-who"><img src="/assets/owner-haibert-480.webp" alt="" width="480" height="640" loading="lazy">You'll talk to Haibert directly.</p>
   </div>
   <div class="contact-row">
     <div class="contact-details">
@@ -435,7 +435,7 @@ def home():
   </section>
 
   <section class="owner" id="owner">
-    <figure class="owner-photo">{img("owner-haibert", "Haibert Aivazian, owner of DentX Dental Lab, in the lab", "(max-width:980px) 92vw, 42vw", 'loading="lazy"', 1400, 1750)}</figure>
+    <figure class="owner-photo">{img("owner-haibert", "Haibert Aivazian, owner of DentX Dental Lab, in DentX scrubs", "(max-width:980px) 92vw, 42vw", 'loading="lazy"', 1086, 1448)}</figure>
     <div class="owner-copy">
       <p class="eyebrow">MEET THE OWNER</p>
       <h2>Haibert Aivazian.<br><em>Owner, at the bench.</em></h2>
@@ -463,7 +463,8 @@ def page(path, d):
     body = "".join(f"<div><h2>{e(t)}</h2><p>{e(p)}</p></div>" for t, p in d["body"])
     pic = ""
     if d["img"]:
-        pic = '<figure class="page-img">' + img(d["img"][:-5], e(d["img_alt"]), "(max-width:1100px) 92vw, 1100px", 'fetchpriority="high"') + "</figure>"
+        portrait = d["img"].startswith("owner-")
+        pic = (f'<figure class="page-img{" portrait" if portrait else ""}">' + img(d["img"][:-5], e(d["img_alt"]), "(max-width:680px) 92vw, 520px" if portrait else "(max-width:1100px) 92vw, 1100px", 'fetchpriority="high"', *((1086, 1448) if portrait else (1400, 933))) + "</figure>")
     prices = (f'<section class="ledger light"><div class="ledger-head"><div><p class="eyebrow dark">TURNAROUND &amp; PRICES</p><h2>Published <em>prices.</em></h2></div></div><div class="ledger-one">{ledger(d["cats"])}</div></section>' if d["cats"] else "")
     ship = "".join(f"<div><h3>{a}</h3><p>{b}</p></div>" for a, b in SHIP)
     related = "".join(f'<a href="{p}">{e(x["h1"].replace("<br>", " ").replace("<em>", "").replace("</em>", "").replace("&amp;", "&"))} →</a>' for p, x in PAGES.items() if p != path)
