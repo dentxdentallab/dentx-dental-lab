@@ -1,6 +1,6 @@
 # DentX Dental Lab
 
-> Premium digital dental laboratory in Tarzana, California, shipping to dental offices across the United States. Complimentary shade matching. Digital cases from Medit, iTero, Shining 3D, DEXIS IOS Cloud or STL.
+> Premium digital dental laboratory in Tarzana, California, shipping to dental offices across the United States. Digital shade matching. Digital cases from Medit, iTero, Shining 3D, DEXIS IOS Cloud or STL.
 
 - Legal name: DentX Dental Lab Inc
 - Address: 18401 Burbank Blvd #110, Tarzana, CA 91356

@@ -59,7 +59,7 @@ FAQ_HOME = [
     ("How fast are zirconia and E.max crowns?", "Up to 5 business days in the lab, counted from when your case or scan arrives with a complete Rx. Shipping time outside LA County is on top of that."),
     ("Which intraoral scanners can send cases to DentX?", "Medit, iTero, Shining 3D and DEXIS IOS Cloud, or email STL files. Call the lab and we will walk you through connecting your scanner account."),
     ("What do you need with each case?", "A complete Rx: service, teeth, shade and due date. If the Rx is missing or unclear we call your office before we start, and the clock starts once we have it."),
-    ("Is shade matching included?", "Yes. DentX does complimentary shade matching for every client. Send a shade tab reading or a photo with the case."),
+    ("How do you match shade?", "Digitally. Instead of holding a shade tab up to the tooth and guessing by eye, DentX measures shade with a digital shade system that holds the full VITA range and bleach shades, so the restoration matches the teeth around it. Send your shade notes or photos with the case, or bring the patient by the Tarzana lab."),
     ("How long do dentures and partials take?", "Acrylic dentures: 6 business days for the bite block, 7 for teeth try-in and 7 for the final finish. Printed dentures take 7 business days, combination metal + Valplast 12."),
     ("Is there a rush option?", "Stayplates can be done in 2 business days with a $50 rush fee. For other rush requests, call the lab."),
     ("Where is DentX Dental Lab and when are you open?", f"{ADDR}, in the San Fernando Valley. Open {HOURS}. Phone or text {PHONE}, email {EMAIL}."),
@@ -70,10 +70,10 @@ PAGES = {
         title="Zirconia Crowns Dental Lab | $75, 5 Business Days | DentX",
         desc="Zirconia crowns from $75 in 5 business days. Layered zirconia $99. Free pickup and delivery across LA County, shipping nationwide. DentX Dental Lab, Tarzana CA.",
         h1="Zirconia crowns.<br><em>Five days in the lab.</em>",
-        lead="Monolithic zirconia from $75 and layered zirconia from $99, designed from your scan and shade-matched at no charge. Free pickup and delivery across LA County.",
+        lead="Monolithic zirconia from $75 and layered zirconia from $99, designed from your scan and matched with digital shade technology. Free pickup and delivery across LA County.",
         cats=["ceramic"], img="bench-ceramic.webp", img_alt="Ceramist layering porcelain on a zirconia crown beside the furnace",
         body=[
-            ("Monolithic or layered", "Monolithic zirconia for strength on posterior teeth and bruxers. Layered zirconia when the anterior needs more life in the incisal third. Tell us the shade and we match it, free."),
+            ("Monolithic or layered", "Monolithic zirconia for strength on posterior teeth and bruxers. Layered zirconia when the anterior needs more life in the incisal third. Shade is measured digitally, not guessed against a tab."),
             ("From scan to finished crown", "Send from Medit, iTero, Shining 3D, DEXIS IOS Cloud or by STL. Up to 5 business days in the lab, counted from when your scan arrives with a complete Rx. In LA County our driver delivers it free; elsewhere it ships back for $7."),
             ("Temporaries and wax-ups", "PMMA temporary crowns are $45 in 5 business days. Diagnostic wax-ups are $25 in 4 business days."),
         ],
@@ -81,14 +81,14 @@ PAGES = {
              ("How long does a zirconia crown take?", "5 business days in the lab for monolithic zirconia, 6 for layered, counted from when the case arrives.")]),
     "/emax-crowns-veneers/": dict(
         title="E.max Crowns & Veneers Lab | From $85, 5 Days | DentX",
-        desc="E.max crowns $85, veneers $99, inlays and onlays $75, all in 5 business days with complimentary shade matching. DentX Dental Lab ships nationwide.",
+        desc="E.max crowns $85, veneers $99, inlays and onlays $75, all in up to 5 business days, with digital shade matching. DentX Dental Lab, Tarzana CA.",
         h1="E.max crowns <em>&amp;</em> veneers.",
-        lead="Lithium disilicate crowns, veneers, inlays and onlays, shade-matched for every client and finished in 5 business days.",
+        lead="Lithium disilicate crowns, veneers and inlays built for esthetics: natural translucency, characterized incisal edges, and shade matched digitally. Up to 5 business days in the lab.",
         cats=["ceramic"], img="hero.webp", img_alt="Glazed three-unit ceramic bridge",
         body=[
             ("Anterior esthetics", "E.max crowns at $85 and veneers at $99 for cases where translucency matters. Layered E.max at $99 in 6 business days."),
             ("Conservative restorations", "Inlays and onlays at $75 in 5 business days. Diagnostic wax-ups at $25 to plan the case with your patient."),
-            ("Shade on us", "Send the shade tab reading or a photo under daylight. Matching is complimentary for every office."),
+            ("Shade, measured digitally", "No more guessing against a shade tab. Our digital shade system covers the full VITA range and bleach shades, so the color is measured, not eyeballed."),
         ],
         faq=[("How much is an E.max crown?", "An E.max crown is $85. Veneers are $99."),
              ("How long do veneers take?", "Veneers take 5 business days in the lab.")]),
@@ -128,19 +128,19 @@ PAGES = {
             ("Los Angeles County", "Free pickup and delivery by our own driver. Call or text (818) 687-0085 before 12 pm and we'll do our best to pick up the same day."),
             ("Digital cases from anywhere", "Send from Medit, iTero, Shining 3D, DEXIS IOS Cloud or by STL. No box to pack. Up to 5 business days in the lab from when the scan arrives with a complete Rx, then it ships back for $7 per case."),
             ("Impressions and models", "Outside LA County we email you a prepaid label, billed at the carrier's cost. Finished work ships back for $7 per case."),
-            ("Why offices switch", "One flat price list, published. Turnaround in business days you can book patients around. Complimentary shade matching. A lab owner who answers the phone."),
+            ("Why offices switch", "One flat price list, published. Turnaround in business days you can book patients around. Digital shade matching. A lab owner who answers the phone."),
         ],
         faq=[("Do you ship to other states?", "Yes. DentX ships to dental offices across the United States."),
              ("Who pays for shipping?", "In LA County, nobody: pickup and delivery are free. Outside LA County, shipping finished work back is $7 per case, and inbound labels for impressions are billed at the carrier's cost.")]),
     "/about/": dict(
         title="About Haibert Aivazian, Owner of DentX Dental Lab | Tarzana, CA",
-        desc="Meet Haibert Aivazian, licensed owner of DentX Dental Lab, in business since 2008. He does the shade matching himself. Published prices, 5-day crowns, shipping nationwide.",
+        desc="Meet Haibert Aivazian, licensed owner of DentX Dental Lab, in business since 2008. Esthetic crown and bridge, digital shade matching, published prices. Tarzana, CA.",
         h1="Meet Haibert Aivazian.<br><em>Owner of DentX.</em>",
         lead="Licensed, in business since 2008, and still at the bench. When you send a case to DentX, you know whose hands it's in.",
         cats=[], img="owner-haibert.webp", img_alt="Haibert Aivazian, owner of DentX Dental Lab, in DentX scrubs",
         body=[
             ("Since 2008", "Haibert has been in business since 2008. In that time dentistry moved from impressions to intraoral scans, and DentX takes both."),
-            ("Shade, in person", "Haibert does the shade matching himself, free for every client. Send a photo under daylight, or bring your patient to the Tarzana lab and he'll match it with you there."),
+            ("Built for esthetics", "Haibert's focus is the work patients notice: anterior crowns and veneers with natural translucency, surface texture and the right value. Shade is measured with digital shade technology, not guessed with a tab. Patients are welcome at the Tarzana lab for a shade appointment."),
             ("Why offices switch", "Big labs run on volume, so your case becomes a ticket number. DentX publishes its prices, quotes turnaround in business days, ships digital cases back free, and puts you on the phone with the owner."),
             ("Licensed and accountable", "DentX Dental Lab Inc is a licensed lab, owned and run by Haibert. If something about a case needs a second look, you call him and talk it through."),
         ],
@@ -210,7 +210,7 @@ def lab_ld():
         "additionalType": "https://en.wikipedia.org/wiki/Dental_laboratory",
         "name": "DentX Dental Lab", "legalName": "DentX Dental Lab Inc", "url": SITE + "/",
         "logo": SITE + "/assets/logo.svg", "image": SITE + "/assets/og.jpg",
-        "description": "Digital dental laboratory in Tarzana, California. Free pickup and delivery across Los Angeles County, shipping to dental offices nationwide. Zirconia and E.max crowns, veneers, implant crowns, dentures, partials and night guards. Complimentary shade matching.",
+        "description": "Digital dental laboratory in Tarzana, California. Free pickup and delivery across Los Angeles County, shipping to dental offices nationwide. Zirconia and E.max crowns, veneers, implant crowns, dentures, partials and night guards. Digital shade matching.",
         "telephone": "+1-818-687-0085", "email": EMAIL, "priceRange": "$15–$250", "foundingDate": "2008",
         "founder": {"@type": "Person", "name": OWNER, "jobTitle": "Owner", "image": SITE + "/assets/owner-haibert.webp", "url": SITE + "/about/"},
         "address": {"@type": "PostalAddress", "streetAddress": "18401 Burbank Blvd #110", "addressLocality": "Tarzana",
@@ -352,13 +352,13 @@ def home():
     steps = [("Day 0", "Case arrives", "With a complete Rx, the clock starts."),
              ("Day 1", "Design", "Your crown is designed from the scan."),
              ("Days 2–3", "Mill & sinter", "Milled and fired in-house."),
-             ("Day 4", "Stain, glaze, shade", "Matched to your shade, free."),
+             ("Day 4", "Stain & glaze", "Characterized to the digital shade."),
              ("Day 5", "Checked & out", "Inspected, packed, on its way."),
              ("Delivery", "To your office", "Free by our driver in LA County, $7 shipping elsewhere.")]
     step_html = "".join(f'<li><span class="day">{d}</span><h3>{t}</h3><p>{p}</p></li>' for d, t, p in steps)
     ld = [lab_ld(), faq_ld(FAQ_HOME)]
     return head("DentX Dental Lab | Zirconia, E.max, Implants &amp; Dentures · Ships Nationwide",
-                "Premium dental lab in Tarzana, CA shipping nationwide. Zirconia crowns $75 and E.max $85 in up to 5 business days, free pickup and delivery across LA County, complimentary shade matching.",
+                "Premium dental lab in Tarzana, CA shipping nationwide. Zirconia crowns $75 and E.max $85 in up to 5 business days, free pickup and delivery across LA County, digital shade matching.",
                 "/", ld, preload="hero.webp") + f"""
 <body class="home">
 {header()}
@@ -384,7 +384,7 @@ def home():
     </div>
     <div class="hero-bottom">
       <span>Free LA County pickup &amp; delivery</span>
-      <span>Shade matching on us</span>
+      <span>Digital shade matching</span>
       <span>Published prices</span>
     </div>
   </section>
@@ -448,11 +448,11 @@ def home():
   </section>
 
   <section class="shade">
-    <div class="shade-photo">{img("shade", "Crown beside ceramic shade tabs", "(max-width:980px) 92vw, 50vw", 'loading="lazy"')}</div>
+    <div class="shade-photo">{img("shade", "Ceramic crown compared for shade under daylight", "(max-width:980px) 92vw, 50vw", 'loading="lazy"')}</div>
     <div class="shade-copy">
-      <p class="eyebrow">COMPLIMENTARY SHADE MATCHING</p>
-      <h2>A shade<br><em>closer.</em></h2>
-      <p>We match shade for every client. Send the tab reading or a photo under daylight. We do the rest.</p>
+      <p class="eyebrow">DIGITAL SHADE MATCHING</p>
+      <h2>Measured,<br><em>not guessed.</em></h2>
+      <p>Most labs still match shade by holding a tab next to a tooth. We measure it with a digital shade system that holds the full VITA range and bleach shades, so the crown disappears next to the natural teeth.</p>
     </div>
   </section>
 
@@ -461,10 +461,10 @@ def home():
     <div class="owner-copy">
       <p class="eyebrow">MEET THE OWNER</p>
       <h2>Haibert Aivazian.<br><em>Owner, at the bench.</em></h2>
-      <p>Haibert has been in business since 2008, and DentX is his lab. He's licensed, he works the bench himself, and he does the shade matching.</p>
+      <p>Haibert has been in business since 2008, and DentX is his lab. He's licensed, he works the bench himself, and his focus is esthetics: the anterior crowns and veneers patients actually look at.</p>
       <p>Big labs are built for volume, so your case becomes a ticket number. Haibert built DentX for offices that want to know who is making their crowns, and want that person to pick up the phone.</p>
-      <p>Shade is the part he won't hand off. Send a photo, or bring your patient by the Tarzana lab and he'll match it in person.</p>
-      <ul class="owner-facts"><li><strong>2008</strong>In business since</li><li><strong>Licensed</strong>Dental lab</li><li><strong>Free</strong>Shade matching, by Haibert</li></ul>
+      <p>He runs DentX on current technology, from digital design and in-house milling to digital shade measurement, so what you see in the mouth matches what you planned.</p>
+      <ul class="owner-facts"><li><strong>2008</strong>In business since</li><li><strong>Licensed</strong>Dental lab</li><li><strong>Digital</strong>Shade measurement</li></ul>
       <div class="actions"><a class="btn btn-gold" href="tel:{PHONE_TEL}" data-ev="call">Call Haibert</a><a class="btn btn-ghost" href="/about/">About Haibert</a></div>
     </div>
   </section>
@@ -514,7 +514,7 @@ def page(path, d):
 # ---------------------------------------------------------------- llms.txt + sitemap + robots
 def llms():
     lines = ["# DentX Dental Lab", "",
-             "> Premium digital dental laboratory in Tarzana, California, shipping to dental offices across the United States. Complimentary shade matching. Digital cases from Medit, iTero, Shining 3D, DEXIS IOS Cloud or STL.", "",
+             "> Premium digital dental laboratory in Tarzana, California, shipping to dental offices across the United States. Digital shade matching. Digital cases from Medit, iTero, Shining 3D, DEXIS IOS Cloud or STL.", "",
              "- Legal name: DentX Dental Lab Inc", f"- Address: {ADDR}", f"- Phone: +1 {PHONE}", f"- Email: {EMAIL}", f"- Hours: {HOURS}",
              "- Audience: dentists and dental office managers (not patients)", "", "## Shipping"]
     lines += [f"- {a}: {b}" for a, b in SHIP]
