@@ -59,3 +59,55 @@ document.querySelectorAll('.lazy-video').forEach(v => {
   }), { rootMargin: '200px' });
   io.observe(v);
 });
+
+// Quick help: a scripted, button-driven guide. Runs entirely in the browser, no external services, no AI claims.
+(() => {
+  const D = window.DX; if (!D) return;
+  const el = (t, a = {}, ...kids) => { const e = document.createElement(t); Object.entries(a).forEach(([k, v]) => k === 'class' ? e.className = v : e.setAttribute(k, v)); kids.flat().forEach(c => e.append(c)); return e; };
+  const sms = body => `sms:${D.tel}${/iPhone|iPad|Mac/.test(navigator.userAgent) ? '&' : '?'}body=${encodeURIComponent(body)}`;
+  const openNow = () => { const t = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' })); const d = t.getDay(), h = t.getHours(); return d >= 1 && d <= 5 && h >= 9 && h < 18; };
+  const call = el('a', { class: 'qh-act gold', href: `tel:${D.tel}`, 'data-ev': 'call' }, `Call ${D.phone}`);
+  const actions = (...xs) => el('div', { class: 'qh-acts' }, ...xs);
+  const txt = (label, body) => el('a', { class: 'qh-act', href: sms(body), 'data-ev': 'text' }, label);
+  const link = (label, href) => el('a', { class: 'qh-act', href }, label);
+  const ship = Object.fromEntries(D.ship.map(([k, v]) => [k, v]));
+
+  const nodes = {
+    root: () => ({ say: 'What can we help with?', opts: [['Prices', 'prices'], ['Turnaround', 'turn'], ['Pickup & shipping', 'ship'], ['Send my first case', 'first'], ['Scanners we accept', 'scan'], ['Talk to Haibert', 'talk']] }),
+    prices: () => ({ say: 'Which work?', opts: D.cats.map(c => [c.label, 'cat:' + c.key]) }),
+    turn: () => ({ say: 'Up to 5 business days in the lab, counted from when your case arrives with a complete Rx. Dentures and partials go by stage (bite block, try-in, finish). Shipping time outside LA County is on top.', end: actions(link('Full turnaround list', '/#prices'), call) }),
+    ship: () => ({ say: 'Where is your office?', opts: [['Los Angeles County', 'la'], ['Outside LA County', 'out']] }),
+    la: () => ({ say: ship['Los Angeles County'], end: actions(txt('Text a pickup request', 'Hi DentX, pickup request.\nOffice:\nAddress:\nNumber of cases:'), call) }),
+    out: () => ({ say: 'Sending a scan or physical impressions?', opts: [['Digital scan', 'outd'], ['Impressions / models', 'outi']] }),
+    outd: () => ({ say: ship['Outside LA County, digital'], end: actions(link('Send a case', '/send-a-case/#start'), call) }),
+    outi: () => ({ say: ship['Outside LA County, impressions'], end: actions(txt('Text for a label', 'Hi DentX, please email a prepaid shipping label.\nOffice:\nAddress:\nEmail:'), link('Request by form', '/send-a-case/#start')) }),
+    first: () => ({ say: '1. Scan (Medit, iTero, Shining 3D, DEXIS) or take impressions.  2. Fill the Rx: service, teeth, shade, due date.  3. LA County: we pick up free. Elsewhere: send the scan, or we email a label.  4. Up to 5 business days in the lab.', end: actions(link('Start my first case', '/send-a-case/#start'), call) }),
+    scan: () => ({ say: `We receive from ${D.scanners.join(', ')}. Call and we'll walk you through connecting your scanner account.`, end: actions(call) }),
+    talk: () => ({ say: `${openNow() ? 'The lab is open now.' : 'The lab is closed right now.'} Hours: ${D.hours} (Pacific). ${openNow() ? 'Call or text, Haibert or the team will answer.' : 'Text or email and we\'ll get back to you first thing.'}`, end: actions(call, txt('Text the lab', 'Hi DentX, '), link('Email', `mailto:${D.email}`)) }),
+  };
+  D.cats.forEach(c => nodes['cat:' + c.key] = () => ({
+    say: c.label, list: c.rows.map(([n, d, p]) => `${n}${d ? ' · ' + d + ' days' : ''} · ${p}`),
+    end: actions(link('Full price list', '/#prices'), call) }));
+
+  const btn = el('button', { class: 'qh-launch', type: 'button', 'aria-expanded': 'false', 'aria-controls': 'qh-panel' }, 'Quick help');
+  const body = el('div', { class: 'qh-body', 'aria-live': 'polite' });
+  const panel = el('div', { class: 'qh-panel', id: 'qh-panel', role: 'dialog', 'aria-label': 'Quick help', hidden: '' },
+    el('div', { class: 'qh-head' }, el('strong', {}, 'DentX quick help'), el('button', { class: 'qh-x', type: 'button', 'aria-label': 'Close' }, '×')), body,
+    el('p', { class: 'qh-foot' }, 'Answers come from the lab\'s published prices and policies.'));
+  const history = [];
+  const show = (id, push = true) => {
+    if (push) history.push(id);
+    const n = nodes[id](); body.replaceChildren(el('p', { class: 'qh-say' }, n.say));
+    if (n.list) body.append(el('ul', { class: 'qh-list' }, n.list.map(t => el('li', {}, t))));
+    if (n.opts) body.append(el('div', { class: 'qh-opts' }, n.opts.map(([l, k]) => { const b = el('button', { type: 'button', class: 'qh-opt' }, l); b.onclick = () => show(k); return b; })));
+    if (n.end) body.append(n.end);
+    if (history.length > 1) { const b = el('button', { type: 'button', class: 'qh-back' }, '← Back'); b.onclick = () => { history.pop(); show(history[history.length - 1], false); }; body.append(b); }
+    (body.querySelector('button, a') || body).focus?.();
+    try { window.va && window.va('event', { name: 'quick_help', data: { step: id } }); } catch {}
+  };
+  const toggle = open => { panel.hidden = !open; btn.setAttribute('aria-expanded', String(open)); if (open) { history.length = 0; show('root'); } else btn.focus(); };
+  btn.onclick = () => toggle(panel.hidden);
+  panel.querySelector('.qh-x').onclick = () => toggle(false);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) toggle(false); });
+  document.body.append(btn, panel);
+})();

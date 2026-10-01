@@ -8,6 +8,7 @@ SITE = os.environ.get("SITE_URL", "https://www.dentxdentallab.com")  # ponytail:
 PHONE, PHONE_TEL = "(818) 687-0085", "+18186870085"
 EMAIL = "Dentxdentallab@yahoo.com"
 ADDR = "18401 Burbank Blvd #110, Tarzana, CA 91356"
+HOURS = "Mon–Fri 9 am–6 pm"
 MAPS = "https://www.google.com/maps/search/?api=1&query=18401+Burbank+Blvd+%23110+Tarzana+CA+91356"
 TODAY = "2026-10-01"
 
@@ -48,31 +49,32 @@ OWNER = "Haibert Aivazian"
 SCANNERS = ["Medit", "iTero", "Shining 3D", "DEXIS IOS Cloud", "STL by email"]
 
 SHIP = [
-    ("Digital cases", "Free FedEx 2Day return shipping. No minimum."),
-    ("Impressions & models", "Free 2-day shipping both ways on cases $150+. Under $150: prepaid label, $15 each way."),
-    ("Los Angeles area", "Free pickup from your office and dropoff of finished work."),
+    ("Los Angeles County", "Free pickup and delivery by our own driver. Call or text before 12 pm and we'll do our best to pick up the same day."),
+    ("Outside LA County, digital", "Send your scan. Finished work ships back for $7 per case."),
+    ("Outside LA County, impressions", "We email you a prepaid label, billed at the carrier's cost. Finished work ships back for $7 per case."),
 ]
 
 FAQ_HOME = [
-    ("Do you work with dental offices outside California?", "Yes. DentX ships to dental offices across the United States. Digital cases ship back free by FedEx 2Day with no minimum. For impressions and models, shipping is free both ways on cases of $150 or more, and a $15 prepaid label each way below that."),
-    ("How fast are zirconia and E.max crowns?", "Zirconia crowns, E.max crowns and veneers take 5 business days in the lab, counted from when your scan or case arrives. With free FedEx 2Day return, a digital crown case is in your office in about 7 business days."),
+    ("Do you deliver?", "Yes. Across Los Angeles County our own driver picks up and delivers for free. Call or text before 12 pm and we'll do our best to pick up the same day. Outside LA County we ship: finished work is $7 per case to ship back, and for impressions we email a prepaid label billed at the carrier's cost."),
+    ("How fast are zirconia and E.max crowns?", "Up to 5 business days in the lab, counted from when your case or scan arrives with a complete Rx. Shipping time outside LA County is on top of that."),
     ("Which intraoral scanners can send cases to DentX?", "Medit, iTero, Shining 3D and DEXIS IOS Cloud, or email STL files. Call the lab and we will walk you through connecting your scanner account."),
+    ("What do you need with each case?", "A complete Rx: service, teeth, shade and due date. If the Rx is missing or unclear we call your office before we start, and the clock starts once we have it."),
     ("Is shade matching included?", "Yes. DentX does complimentary shade matching for every client. Send a shade tab reading or a photo with the case."),
     ("How long do dentures and partials take?", "Acrylic dentures: 6 business days for the bite block, 7 for teeth try-in and 7 for the final finish. Printed dentures take 7 business days, combination metal + Valplast 12."),
     ("Is there a rush option?", "Stayplates can be done in 2 business days with a $50 rush fee. For other rush requests, call the lab."),
-    ("Where is DentX Dental Lab?", f"{ADDR}, in the San Fernando Valley. Phone {PHONE}, email {EMAIL}."),
+    ("Where is DentX Dental Lab and when are you open?", f"{ADDR}, in the San Fernando Valley. Open {HOURS}. Phone or text {PHONE}, email {EMAIL}."),
 ]
 
 PAGES = {
     "/zirconia-crowns/": dict(
         title="Zirconia Crowns Dental Lab | $75, 5 Business Days | DentX",
-        desc="Zirconia crowns from $75 in 5 business days. Layered zirconia $99. Digital cases ship back free by FedEx 2Day to dental offices nationwide. DentX Dental Lab, Tarzana CA.",
+        desc="Zirconia crowns from $75 in 5 business days. Layered zirconia $99. Free pickup and delivery across LA County, shipping nationwide. DentX Dental Lab, Tarzana CA.",
         h1="Zirconia crowns.<br><em>Five days in the lab.</em>",
-        lead="Monolithic zirconia from $75 and layered zirconia from $99, designed from your scan and shade-matched at no charge. Shipped back free by FedEx 2Day.",
+        lead="Monolithic zirconia from $75 and layered zirconia from $99, designed from your scan and shade-matched at no charge. Free pickup and delivery across LA County.",
         cats=["ceramic"], img="bench-ceramic.webp", img_alt="Ceramist layering porcelain on a zirconia crown beside the furnace",
         body=[
             ("Monolithic or layered", "Monolithic zirconia for strength on posterior teeth and bruxers. Layered zirconia when the anterior needs more life in the incisal third. Tell us the shade and we match it, free."),
-            ("From scan to your door", "Send from Medit, iTero, Shining 3D, DEXIS IOS Cloud or by STL. The 5 in-lab days start when your scan lands. FedEx 2Day return is free, so most offices have the crown in about 7 business days."),
+            ("From scan to finished crown", "Send from Medit, iTero, Shining 3D, DEXIS IOS Cloud or by STL. Up to 5 business days in the lab, counted from when your scan arrives with a complete Rx. In LA County our driver delivers it free; elsewhere it ships back for $7."),
             ("Temporaries and wax-ups", "PMMA temporary crowns are $45 in 5 business days. Diagnostic wax-ups are $25 in 4 business days."),
         ],
         faq=[("How much does a zirconia crown cost?", "A zirconia crown is $75. Layered zirconia is $99."),
@@ -118,18 +120,18 @@ PAGES = {
              ("How long does a Valplast partial take?", "Bite block 6 business days, teeth try-in 7, final Valplast finish 12.")]),
     "/nationwide-dental-lab/": dict(
         title="Nationwide Dental Lab with Free Return Shipping | DentX",
-        desc="Send cases to DentX Dental Lab from anywhere in the U.S. Free FedEx 2Day return on digital cases, no minimum. Free 2-day shipping both ways on impression cases $150+.",
-        h1="A Los Angeles lab<br><em>for offices anywhere in the U.S.</em>",
-        lead="Scan today, crown in your office in about 7 business days. Digital cases ship back free by FedEx 2Day with no minimum.",
+        desc="Send cases to DentX Dental Lab from anywhere in the U.S. Free pickup and delivery across LA County; elsewhere $7 per case to ship finished work back.",
+        h1="Pickup in LA County.<br><em>Shipping everywhere else.</em>",
+        lead="Our own driver covers Los Angeles County for free. Everywhere else, send your scan or impressions and we ship the finished work back for $7 per case.",
         cats=[], img="bench-ceramic.webp", img_alt="Ceramist finishing a crown at the DentX bench",
         body=[
-            ("Digital cases", "Send from Medit, iTero, Shining 3D, DEXIS IOS Cloud or by STL. No box to pack. The in-lab clock starts the moment your scan lands, and the finished work ships back free by FedEx 2Day."),
-            ("Impressions & models", "Cases of $150 or more ship free both ways by 2-day service. Under $150, we send a prepaid label at $15 each way."),
-            ("Los Angeles area", "Offices in Los Angeles and the San Fernando Valley get free pickup and dropoff. Call to schedule."),
+            ("Los Angeles County", "Free pickup and delivery by our own driver. Call or text (818) 687-0085 before 12 pm and we'll do our best to pick up the same day."),
+            ("Digital cases from anywhere", "Send from Medit, iTero, Shining 3D, DEXIS IOS Cloud or by STL. No box to pack. Up to 5 business days in the lab from when the scan arrives with a complete Rx, then it ships back for $7 per case."),
+            ("Impressions and models", "Outside LA County we email you a prepaid label, billed at the carrier's cost. Finished work ships back for $7 per case."),
             ("Why offices switch", "One flat price list, published. Turnaround in business days you can book patients around. Complimentary shade matching. A lab owner who answers the phone."),
         ],
         faq=[("Do you ship to other states?", "Yes. DentX ships to dental offices across the United States."),
-             ("Who pays for shipping?", "Digital cases ship back free by FedEx 2Day with no minimum. Impression cases of $150+ ship free both ways; below $150 it's a $15 prepaid label each way.")]),
+             ("Who pays for shipping?", "In LA County, nobody: pickup and delivery are free. Outside LA County, shipping finished work back is $7 per case, and inbound labels for impressions are billed at the carrier's cost.")]),
     "/about/": dict(
         title="About Haibert Aivazian, Owner of DentX Dental Lab | Tarzana, CA",
         desc="Meet Haibert Aivazian, licensed owner of DentX Dental Lab, in business since 2008. He does the shade matching himself. Published prices, 5-day crowns, shipping nationwide.",
@@ -152,8 +154,9 @@ PAGES = {
         cats=[], img=None, img_alt="",
         body=[
             ("Scanning digitally?", "We receive from Medit, iTero, Shining 3D and DEXIS IOS Cloud, or STL by email. Call the lab and we'll walk you through connecting your scanner account to DentX."),
-            ("Sending impressions?", "Request a shipping label below. Cases of $150+ ship free both ways."),
-            ("In Los Angeles?", "Request a pickup and we'll collect from your office."),
+            ("Every case needs an Rx", "Service, teeth, shade and due date. If something is missing we call your office first, and the 5 business days start once the Rx is complete."),
+            ("Sending impressions from outside LA County?", "Request a label below and we'll email a prepaid one, billed at the carrier's cost. Finished work ships back for $7 per case."),
+            ("In LA County?", "Call or text before 12 pm and our driver will do their best to pick up the same day. Free."),
         ],
         faq=[]),
 }
@@ -186,6 +189,11 @@ def ledger(keys=None):
         out.append(f'<table><caption>{e(label)}</caption>{head}<tbody>{body}</tbody></table>')
     return "\n".join(out)
 
+def guide_data():
+    """Facts for the in-browser Quick help guide (no external services)."""
+    cats = [{"key": k, "label": l, "rows": [[n, d, p] for n, _, d, p, _ in rows if p.startswith("$")]} for k, l, rows in CATALOG]
+    return {"phone": PHONE, "tel": PHONE_TEL, "email": EMAIL, "hours": HOURS, "ship": SHIP, "cats": cats, "scanners": SCANNERS}
+
 def faq_html(items):
     return "\n".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in items)
 
@@ -202,12 +210,13 @@ def lab_ld():
         "additionalType": "https://en.wikipedia.org/wiki/Dental_laboratory",
         "name": "DentX Dental Lab", "legalName": "DentX Dental Lab Inc", "url": SITE + "/",
         "logo": SITE + "/assets/logo.svg", "image": SITE + "/assets/og.jpg",
-        "description": "Digital dental laboratory in Tarzana, California, serving dental offices nationwide. Zirconia and E.max crowns, veneers, implant crowns, dentures, partials and night guards. Free return shipping on digital cases, complimentary shade matching.",
+        "description": "Digital dental laboratory in Tarzana, California. Free pickup and delivery across Los Angeles County, shipping to dental offices nationwide. Zirconia and E.max crowns, veneers, implant crowns, dentures, partials and night guards. Complimentary shade matching.",
         "telephone": "+1-818-687-0085", "email": EMAIL, "priceRange": "$15–$250", "foundingDate": "2008",
         "founder": {"@type": "Person", "name": OWNER, "jobTitle": "Owner", "image": SITE + "/assets/owner-haibert.webp", "url": SITE + "/about/"},
         "address": {"@type": "PostalAddress", "streetAddress": "18401 Burbank Blvd #110", "addressLocality": "Tarzana",
                     "addressRegion": "CA", "postalCode": "91356", "addressCountry": "US"},
-        "areaServed": [{"@type": "Country", "name": "United States"}, {"@type": "Place", "name": "San Fernando Valley, CA"}],
+        "areaServed": [{"@type": "AdministrativeArea", "name": "Los Angeles County, CA"}, {"@type": "Country", "name": "United States"}],
+        "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"}],
         "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Dental lab services and prices", "itemListElement": offers},
     }
 
@@ -248,6 +257,7 @@ def head(title, desc, path, ld, preload=None):
 <script defer src="/assets/scrollcraft.js"></script>
 <script defer src="/assets/site.js"></script>
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<script>window.DX={json.dumps(guide_data(), ensure_ascii=False)}</script>
 </head>"""
 
 def header():
@@ -314,7 +324,7 @@ def footer():
     <a class="btn btn-gold" href="/send-a-case/">Send a case</a>
   </div>
   <footer class="footer">
-    <span>DentX Dental Lab Inc · Tarzana, CA · Shipping nationwide</span>
+    <span>DentX Dental Lab Inc · Tarzana, CA · {HOURS} · Free pickup &amp; delivery in LA County</span>
     <nav aria-label="Footer">{links}</nav>
   </footer>
 </section>
@@ -338,16 +348,16 @@ def home():
                 "Screw & cement retained · Custom abutments · Guides", "/implant-crowns/")]
     bench_html = "".join(f"""<a class="bench" href="{u}"><div class="bench-image">{img(im[:-5], alt, "(max-width:680px) 82vw, 40vw", 'loading="lazy"')}</div>
 <div class="bench-label"><h3>{t}</h3><span aria-hidden="true">→</span></div><p>{p}</p></a>""" for k, t, im, alt, p, u in benches)
-    steps = [("Day 0", "Your scan lands", "The in-lab clock starts the moment it arrives."),
+    steps = [("Day 0", "Case arrives", "With a complete Rx, the clock starts."),
              ("Day 1", "Design", "Your crown is designed from the scan."),
              ("Days 2–3", "Mill & sinter", "Milled and fired in-house."),
              ("Day 4", "Stain, glaze, shade", "Matched to your shade, free."),
-             ("Day 5", "Ships FedEx 2Day", "Return shipping on us."),
-             ("Day 7", "In your office", "Ready to seat.")]
+             ("Day 5", "Checked & out", "Inspected, packed, on its way."),
+             ("Delivery", "To your office", "Free by our driver in LA County, $7 shipping elsewhere.")]
     step_html = "".join(f'<li><span class="day">{d}</span><h3>{t}</h3><p>{p}</p></li>' for d, t, p in steps)
     ld = [lab_ld(), faq_ld(FAQ_HOME)]
     return head("DentX Dental Lab | Zirconia, E.max, Implants &amp; Dentures · Ships Nationwide",
-                "Premium dental lab in Tarzana, CA shipping nationwide. Zirconia crowns $75 and E.max $85 in 5 business days, free FedEx 2Day return on digital cases, complimentary shade matching.",
+                "Premium dental lab in Tarzana, CA shipping nationwide. Zirconia crowns $75 and E.max $85 in up to 5 business days, free pickup and delivery across LA County, complimentary shade matching.",
                 "/", ld, preload="hero.webp") + f"""
 <body class="home">
 {header()}
@@ -365,14 +375,14 @@ def home():
     </div>
     <div class="hero-copy">
       <h2>Digital cases in.<br><em>Restorations out.</em></h2>
-      <p>Zirconia &amp; E.max crowns in 5 business days. Shipped back free to offices anywhere in the U.S.</p>
+      <p>Zirconia &amp; E.max crowns in up to 5 business days. Free pickup and delivery across LA County, shipping nationwide.</p>
       <div class="actions">
         <a class="btn btn-gold" href="/send-a-case/">Send a case</a>
         <a class="btn btn-ghost" href="tel:{PHONE_TEL}" data-ev="call">Call the lab</a>
       </div>
     </div>
     <div class="hero-bottom">
-      <span>Free FedEx 2Day return on digital cases</span>
+      <span>Free LA County pickup &amp; delivery</span>
       <span>Shade matching on us</span>
       <span>Published prices</span>
     </div>
@@ -381,8 +391,8 @@ def home():
   <section class="clock" aria-labelledby="clock-h">
     <div class="clock-head">
       <p class="eyebrow">HOW A CROWN MOVES</p>
-      <h2 id="clock-h">Scan today.<br><em>In your office in 7.</em></h2>
-      <p>5 business days in the lab, starting the moment your scan lands. Free FedEx 2Day back to you.</p>
+      <h2 id="clock-h">Case in.<br><em>Out in 5.</em></h2>
+      <p>Up to 5 business days in the lab, counted from when your case arrives with a complete Rx. In LA County our driver brings it back free.</p>
     </div>
     <ol class="clock-track">{step_html}</ol>
   </section>
@@ -504,7 +514,7 @@ def page(path, d):
 def llms():
     lines = ["# DentX Dental Lab", "",
              "> Premium digital dental laboratory in Tarzana, California, shipping to dental offices across the United States. Complimentary shade matching. Digital cases from Medit, iTero, Shining 3D, DEXIS IOS Cloud or STL.", "",
-             "- Legal name: DentX Dental Lab Inc", f"- Address: {ADDR}", f"- Phone: +1 {PHONE}", f"- Email: {EMAIL}",
+             "- Legal name: DentX Dental Lab Inc", f"- Address: {ADDR}", f"- Phone: +1 {PHONE}", f"- Email: {EMAIL}", f"- Hours: {HOURS}",
              "- Audience: dentists and dental office managers (not patients)", "", "## Shipping"]
     lines += [f"- {a}: {b}" for a, b in SHIP]
     lines += ["", "## Turnaround (business days in the lab, from arrival) and prices"]
