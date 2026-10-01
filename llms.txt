@@ -1,6 +1,6 @@
 # DentX Dental Lab
 
-> Digital dental laboratory in Tarzana, California, serving dental offices across the San Fernando Valley and Los Angeles. Free pickup and delivery, complimentary shade matching, digital cases accepted from Medit, iTero, Shining 3D and DEXIS IOS Cloud, or by STL.
+> Premium digital dental laboratory in Tarzana, California, shipping to dental offices across the United States. Complimentary shade matching. Digital cases from Medit, iTero, Shining 3D, DEXIS IOS Cloud or STL.
 
 - Legal name: DentX Dental Lab Inc
 - Address: 18401 Burbank Blvd #110, Tarzana, CA 91356
@@ -8,7 +8,13 @@
 - Email: Dentxdentallab@yahoo.com
 - Audience: dentists and dental office managers (not patients)
 
-## Turnaround (business days, pickup and dropoff included) and prices
+## Shipping
+- Digital cases: Free FedEx 2Day return shipping. No minimum.
+- Impressions & models: Free 2-day shipping both ways on cases $150+. Under $150: prepaid label, $15 each way.
+- Los Angeles area: Free pickup from your office and dropoff of finished work.
+
+## Turnaround (business days in the lab, from arrival) and prices
+### Metal-free / full ceramic
 - Zirconia crown: 5 days, $75
 - E.max crown: 5 days, $85
 - Veneers: 5 days, $99
@@ -16,19 +22,30 @@
 - Inlay / onlay: 5 days, $75
 - PMMA temporary crown: 5 days, $45
 - Diagnostic wax-up: 4 days, $25
+### Implant & attachments
 - Implant crown, screw retained: 5 days, $130
 - Implant crown, cement retained: 5 days, $120
-- Custom milled abutment: $230; surgical guide: $95; verification jig: $60; soft tissue: $15
-- Acrylic full denture: bite block 6, teeth try-in 7, final finish 7 days; $180
+- Custom abutment, milled: $230
+- Surgical guide: $95
+- Verification jig: $60
+- Soft tissue: $15
+### Removable
+- Acrylic denture: 6 · 7 · 7 days, $180 (Bite block · teeth try-in · final finish)
 - Printed denture: 7 days, $160
-- Metal partial: metal try-in 11, teeth try-in 7, final finish 7 days; $230
-- Valplast: bite block 6, teeth try-in 7, final finish 12 days; $230
-- Combination metal + Valplast: 12 days, $250
-- Acrylic stayplate: 4 days, $95 per arch up to 3 units, $110 for 4+ units
-- Printed flexible stayplate: 4 days, $85 per arch
-- Stayplate rush: 2 days, $50 rush fee
-- Night guard (hard or soft): 3 days, $85
-- Repair / reline: 2 days excluding delivery, $60; soft reline $80
+- Metal partial: 11 · 7 · 7 days, $230 (Metal try-in · teeth try-in · final finish)
+- Valplast: 6 · 7 · 12 days, $230 (Bite block · teeth try-in · final finish)
+- Combination: 12 days, $250 (Metal + Valplast)
+- Stayplate, acrylic: 4 days, $95 (Per arch, up to 3 units · 4+ units $110)
+- Printed flexible stayplate: 4 days, $85 (Per arch)
+- Stayplate rush: 2 days, +$50 (Rush fee)
+- Night guard: 3 days, $85 (Hard or soft)
+- Repair / reline: 2 days, $60 (Soft reline $80 · excluding delivery time)
 
-## Links
+## Pages
 - Home: https://www.dentxdentallab.com/
+- Zirconia Crowns Dental Lab: https://www.dentxdentallab.com/zirconia-crowns/
+- E.max Crowns & Veneers Lab: https://www.dentxdentallab.com/emax-crowns-veneers/
+- Implant Crowns & Custom Abutments Lab: https://www.dentxdentallab.com/implant-crowns/
+- Dentures, Partials & Valplast Lab: https://www.dentxdentallab.com/dentures-partials/
+- Nationwide Dental Lab with Free Return Shipping: https://www.dentxdentallab.com/nationwide-dental-lab/
+- Send a Case to DentX Dental Lab: https://www.dentxdentallab.com/send-a-case/
