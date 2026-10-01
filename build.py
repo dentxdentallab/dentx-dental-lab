@@ -132,6 +132,47 @@ PAGES = {
         ],
         faq=[("Do you ship to other states?", "Yes. DentX ships to dental offices across the United States."),
              ("Who pays for shipping?", "In LA County, nobody: pickup and delivery are free. Outside LA County, shipping finished work back is $7 per case, and inbound labels for impressions are billed at the carrier's cost.")]),
+    "/dental-lab-los-angeles/": dict(
+        title="Dental Lab in Los Angeles | Free Pickup & Delivery in LA County | DentX",
+        desc="Full-service dental lab serving Los Angeles County with free pickup and delivery by our own driver. Zirconia $75, E.max $85, implants, dentures. Up to 5 business days.",
+        h1="The dental lab for<br><em>Los Angeles offices.</em>",
+        lead="Our own driver picks up and delivers across Los Angeles County, free. Call or text before 12 pm and we'll do our best to pick up the same day.",
+        cats=["ceramic"], img="bench-ceramic.webp", img_alt="Ceramist finishing a crown at the DentX lab in Tarzana",
+        body=[
+            ("Where we pick up", "All of Los Angeles County, including Los Angeles, Beverly Hills, Santa Monica, Burbank, Glendale, Pasadena, Encino, Sherman Oaks, Woodland Hills, Calabasas, Northridge, Long Beach and Torrance."),
+            ("What we make", "Zirconia and E.max crowns, veneers, implant crowns and custom abutments, dentures, partials, Valplast and night guards. Every price is published on this site."),
+            ("How fast", "Up to 5 business days in the lab for crowns and veneers, counted from when your case arrives with a complete Rx. Dentures go by stage."),
+            ("Why LA offices choose DentX", "A lab owner on the phone, digital shade matching instead of guessing with a tab, and a driver who comes to you."),
+        ],
+        faq=[("Do you pick up in Los Angeles?", "Yes. Pickup and delivery are free anywhere in Los Angeles County."),
+             ("How do I schedule a pickup?", "Call or text (818) 687-0085. Before 12 pm we do our best to pick up the same day.")]),
+    "/dental-lab-san-fernando-valley/": dict(
+        title="Dental Lab in the San Fernando Valley | Tarzana | DentX Dental Lab",
+        desc="DentX Dental Lab in Tarzana serves San Fernando Valley dental offices with free pickup and delivery: Encino, Sherman Oaks, Woodland Hills, Van Nuys, Northridge, Studio City.",
+        h1="Your Valley<br><em>dental lab.</em>",
+        lead="We're on Burbank Blvd in Tarzana, minutes from your office. Free pickup and delivery across the Valley and all of LA County.",
+        cats=["ceramic", "removable"], img="bench-removable.webp", img_alt="Dentures on an articulator at the DentX lab bench in Tarzana",
+        body=[
+            ("Close by", "Tarzana, Encino, Sherman Oaks, Woodland Hills, Reseda, Van Nuys, Northridge, Studio City, North Hollywood, Calabasas and the rest of the Valley."),
+            ("Same-day pickup", "Call or text before 12 pm and our driver will do our best to pick up the same day. Delivery of finished work is free too."),
+            ("Bring the patient", "For esthetic anterior cases, patients are welcome at the lab for a digital shade appointment."),
+        ],
+        faq=[("Where is DentX Dental Lab?", f"{ADDR}, open {HOURS}."),
+             ("Do you deliver in the Valley?", "Yes, free, by our own driver, across the San Fernando Valley and all of LA County.")]),
+    "/digital-shade-matching/": dict(
+        title="Digital Shade Matching for Crowns & Veneers | DentX Dental Lab",
+        desc="DentX measures shade digitally with a system that holds the full VITA range and bleach shades, so crowns and veneers match the natural teeth. Esthetic lab in Tarzana, CA.",
+        h1="Shade,<br><em>measured digitally.</em>",
+        lead="A shade tab held up to a tooth depends on the light in the room and the eye of whoever holds it. We measure shade digitally instead.",
+        cats=[], img="shade.webp", img_alt="Ceramic crown compared for shade under daylight",
+        body=[
+            ("Why a tab isn't enough", "Room light, fatigue and the background all change how a tab reads. Two people can read the same tooth differently. That's where most shade remakes start."),
+            ("What we use", "A digital shade system that holds the full VITA range and bleach shades, so the target color is measured and recorded, not eyeballed."),
+            ("Where it matters most", "Anterior crowns, veneers and layered zirconia or E.max, where the restoration sits next to natural teeth."),
+            ("How to send shade", "Send your shade notes and photos with the case, or bring the patient to the Tarzana lab for a shade appointment."),
+        ],
+        faq=[("Is digital shade matching extra?", "No. It's how every case is shade-matched at DentX."),
+             ("Which shade systems do you cover?", "The full VITA range and bleach shades.")]),
     "/about/": dict(
         title="About Haibert Aivazian, Owner of DentX Dental Lab | Tarzana, CA",
         desc="Meet Haibert Aivazian, licensed owner of DentX Dental Lab, in business since 2008. Esthetic crown and bridge, digital shade matching, published prices. Tarzana, CA.",
@@ -453,6 +494,7 @@ def home():
       <p class="eyebrow">DIGITAL SHADE MATCHING</p>
       <h2>Measured,<br><em>not guessed.</em></h2>
       <p>Most labs still match shade by holding a tab next to a tooth. We measure it with a digital shade system that holds the full VITA range and bleach shades, so the crown disappears next to the natural teeth.</p>
+      <a class="inline-link" href="/digital-shade-matching/">How digital shade matching works →</a>
     </div>
   </section>
 
