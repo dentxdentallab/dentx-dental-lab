@@ -26,26 +26,28 @@ if (live) {
 const track = (name, data) => { try { window.va && window.va('event', { name, data }); } catch {} };
 document.addEventListener('click', e => { const a = e.target.closest('[data-ev]'); if (a) track(a.dataset.ev, { page: location.pathname }); });
 
-// Lead form: POST to /api/lead; if the API isn't configured, fall back to a prefilled email.
+// Lead form: no server. Builds the request and hands it to the phone's Messages app (SMS to the lab),
+// with email as the alternative on computers. Nothing is stored by the website.
 document.querySelectorAll('.lead-form').forEach(form => {
-  const status = form.querySelector('.form-status'), btn = form.querySelector('button');
-  form.addEventListener('submit', async e => {
+  const status = form.querySelector('.form-status');
+  const tel = (window.DX && window.DX.tel) || '+18186870085';
+  form.addEventListener('submit', e => {
     e.preventDefault();
     if (!form.reportValidity()) return;
-    const data = Object.fromEntries(new FormData(form));
-    data.page = location.pathname;
-    data.utm = location.search.slice(1);
-    btn.disabled = true; status.textContent = 'Sending…';
-    try {
-      const res = await fetch('/api/lead', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(data) });
-      if (!res.ok) throw new Error(res.status);
-      form.reset(); status.textContent = 'Got it. The lab will call you back today.';
-      track('lead', { need: data.need });
-    } catch {
-      const body = Object.entries(data).filter(([k, v]) => v && k !== 'company_site').map(([k, v]) => `${k}: ${v}`).join('\n');
-      location.href = `mailto:Dentxdentallab@yahoo.com?subject=${encodeURIComponent('New case request: ' + data.practice)}&body=${encodeURIComponent(body)}`;
-      status.textContent = 'Opening your email app… or call (818) 687-0085.';
-    } finally { btn.disabled = false; }
+    const d = Object.fromEntries(new FormData(form));
+    if (d.company_site) return;
+    const msg = [`New case request (website)`, `Practice: ${d.practice}`, `Name: ${d.name}`, `Phone: ${d.phone}`,
+      d.email && `Email: ${d.email}`, d.location && `Location: ${d.location}`, `Wants: ${d.need}`, d.message && `Notes: ${d.message}`].filter(Boolean).join('\n');
+    const sep = /iPhone|iPad|Mac/.test(navigator.userAgent) ? '&' : '?';
+    const smsHref = `sms:${tel}${sep}body=${encodeURIComponent(msg)}`;
+    const mailHref = `mailto:Dentxdentallab@yahoo.com?subject=${encodeURIComponent('New case request: ' + d.practice)}&body=${encodeURIComponent(msg)}`;
+    track('lead', { need: d.need });
+    status.replaceChildren('Your request is ready. Send it to the lab: ');
+    const a1 = Object.assign(document.createElement('a'), { href: smsHref, className: 'btn btn-gold', textContent: 'Send by text' });
+    const a2 = Object.assign(document.createElement('a'), { href: mailHref, className: 'btn btn-ghost', textContent: 'Send by email' });
+    a1.dataset.ev = 'text'; a2.dataset.ev = 'email';
+    status.append(a1, ' ', a2);
+    if (matchMedia('(pointer:coarse)').matches) location.href = smsHref; // phones: open Messages right away
   });
 });
 

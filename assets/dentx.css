@@ -247,3 +247,5 @@ body.inner{background:var(--navy);color:var(--white)}
 .qh-back{justify-self:start;border:0;padding-left:0;color:#a9bbd6}
 .qh-foot{margin:0;padding:0 16px 14px;font-size:11.5px;color:#8ea3c4}
 @media (max-width:680px){.qh-launch{bottom:84px;right:12px;height:44px}.qh-panel{right:12px;bottom:136px}}
+.form-status{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.form-note{font-size:12.5px;color:#8ea3c4;margin:0}

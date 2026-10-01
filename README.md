@@ -1,6 +1,6 @@
 # DentX Dental Lab — public site
 
-Static site + one serverless function, built for Vercel. Instagram/Google traffic → prices & turnaround → call / text / lead form.
+Static site, no server code, built for Vercel. Instagram/Google traffic → prices & turnaround → call / text / lead form.
 
 ## Edit & build
 - All prices, turnaround, shipping terms, FAQs and page copy live in `build.py` (one source → pages, JSON-LD, `llms.txt`, `sitemap.xml`, `robots.txt`).
@@ -12,11 +12,11 @@ Static site + one serverless function, built for Vercel. Instagram/Google traffi
 ## Pages
 `/` · `/zirconia-crowns/` · `/emax-crowns-veneers/` · `/implant-crowns/` · `/dentures-partials/` · `/nationwide-dental-lab/` · `/send-a-case/`
 
-## Lead form (`api/lead.js`)
-Without env vars the form falls back to opening a prefilled email. Set in Vercel → Settings → Environment Variables:
-- SMS to owner: `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM`, `OWNER_SMS_TO`
-- Email to owner + auto-reply to the office: `RESEND_API_KEY`, `LEAD_FROM_EMAIL` (verified domain sender), `LEAD_TO_EMAIL`
-Turn on Vercel Web Analytics; calls/texts/emails/leads are tracked as events.
+## Lead form
+No server, no API. On submit the form builds the request and opens Messages (SMS to (818) 687-0085), with an email button as the alternative. Nothing is stored by the website. Vercel Web Analytics counts calls/texts/emails/leads/Quick help steps as events.
+
+## Quick help
+Button-driven guide in `assets/site.js`, fed by `guide_data()` in `build.py` (prices, delivery terms, hours). No external services.
 
 ## Deploy
 Push this folder as the repo root → import in Vercel (framework preset "Other", no build command, output = root).
@@ -30,4 +30,4 @@ Lighthouse (mobile, compressed local server): home 100/100/100/100; inner pages 
 - Prices/turnaround from the lab's sheets in `../`; shipping terms from competitor research 2026-10-01 (see `../marketing/GROWTH_PLAN.md`).
 
 ## Owner to confirm
-Domain; margin on free FedEx 2Day return for single $75 crowns; whether (818) 687-0085 receives texts; hours; Instagram handle; Meta Pixel ID; real case photos.
+Domain; margin on free FedEx 2Day return for single $75 crowns; Instagram handle; Meta Pixel ID; real case photos.

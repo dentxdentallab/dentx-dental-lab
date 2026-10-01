@@ -283,7 +283,7 @@ def lead_form(title="Start your first case", sub="We reply the same business day
       <a class="btn btn-ghost" href="sms:{PHONE_TEL}" data-ev="text">Text the lab</a>
     </div>
   </div>
-  <form class="lead-form" action="/api/lead" method="post" novalidate>
+  <form class="lead-form" novalidate>
     <label>Practice name<input name="practice" autocomplete="organization" required></label>
     <label>Your name<input name="name" autocomplete="name" required></label>
     <div class="row">
@@ -302,6 +302,7 @@ def lead_form(title="Start your first case", sub="We reply the same business day
     <label>Notes <span>(no patient names)</span><textarea name="message" rows="3"></textarea></label>
     <label class="hp" aria-hidden="true">Leave empty<input name="company_site" tabindex="-1" autocomplete="off"></label>
     <button class="btn btn-gold" type="submit">Send request</button>
+    <p class="form-note">Goes straight to the lab by text or email. Nothing is stored on this website.</p>
     <p class="form-status" role="status" aria-live="polite"></p>
   </form>
 </section>"""
@@ -536,5 +537,5 @@ if __name__ == "__main__":
     urls = ["/"] + list(PAGES)
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           + "".join(f"  <url><loc>{SITE}{u}</loc><lastmod>{TODAY}</lastmod></url>\n" for u in urls) + "</urlset>\n")
-    write("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: {SITE}/sitemap.xml\n")
+    write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
     print("built", len(urls), "pages")
