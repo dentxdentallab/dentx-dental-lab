@@ -44,6 +44,7 @@ CATALOG = [
         ("Repair / reline", "Soft reline $80 · excluding delivery time", "2", "$60", "/dentures-partials/"),
     ]),
 ]
+OWNER = "Haibert Aivazian"
 SCANNERS = ["Medit", "iTero", "Shining 3D", "DEXIS IOS Cloud", "STL by email"]
 
 SHIP = [
@@ -129,6 +130,20 @@ PAGES = {
         ],
         faq=[("Do you ship to other states?", "Yes. DentX ships to dental offices across the United States."),
              ("Who pays for shipping?", "Digital cases ship back free by FedEx 2Day with no minimum. Impression cases of $150+ ship free both ways; below $150 it's a $15 prepaid label each way.")]),
+    "/about/": dict(
+        title="About Haibert Aivazian, Owner of DentX Dental Lab | Tarzana, CA",
+        desc="Meet Haibert Aivazian, licensed owner of DentX Dental Lab, in business since 2008. He does the shade matching himself. Published prices, 5-day crowns, shipping nationwide.",
+        h1="Meet Haibert Aivazian.<br><em>Owner of DentX.</em>",
+        lead="Licensed, in business since 2008, and still at the bench. When you send a case to DentX, you know whose hands it's in.",
+        cats=[], img="owner-haibert-shade.webp", img_alt="Haibert Aivazian, owner of DentX Dental Lab, checking a crown against a shade guide at his bench",
+        body=[
+            ("Since 2008", "Haibert has been in business since 2008. In that time dentistry moved from impressions to intraoral scans, and DentX takes both."),
+            ("Shade, in person", "Haibert does the shade matching himself, free for every client. Send a photo under daylight, or bring your patient to the Tarzana lab and he'll match it with you there."),
+            ("Why offices switch", "Big labs run on volume, so your case becomes a ticket number. DentX publishes its prices, quotes turnaround in business days, ships digital cases back free, and puts you on the phone with the owner."),
+            ("Licensed and accountable", "DentX Dental Lab Inc is a licensed lab, owned and run by Haibert. If something about a case needs a second look, you call him and talk it through."),
+        ],
+        faq=[("Who owns DentX Dental Lab?", "Haibert Aivazian. He has been in business since 2008."),
+             ("Can a patient come in for a shade match?", "Yes. Call (818) 687-0085 to set a time at the Tarzana lab.")]),
     "/send-a-case/": dict(
         title="Send a Case to DentX Dental Lab | Scan, Ship or Pickup",
         desc="Send your first case to DentX Dental Lab: connect Medit, iTero, Shining 3D or DEXIS, email an STL, or request a pickup or shipping label. Call (818) 687-0085.",
@@ -151,9 +166,9 @@ def _min(css):
     return _re.sub(r"\s*([{}:;,>])\s*", r"\1", css).replace(";}", "}").strip()
 CSS = _min("".join(open(f"assets/{n}").read() for n in ("scrollcraft.css", "site.css", "dentx.css"))).replace("url(fonts/", "url(/assets/fonts/")
 
-def img(name, alt, sizes="(max-width:680px) 92vw, 50vw", extra=""):
+def img(name, alt, sizes="(max-width:680px) 92vw, 50vw", extra="", w=1400, h=933):
     return (f'<img src="/assets/{name}.webp" srcset="/assets/{name}-480.webp 480w, /assets/{name}-800.webp 800w, /assets/{name}.webp 1400w" '
-            f'sizes="{sizes}" alt="{alt}" width="1400" height="933" {extra}>')
+            f'sizes="{sizes}" alt="{alt}" width="{w}" height="{h}" {extra}>')
 e = html.escape
 def svg_logo(cls=""):
     return f'<img class="{cls}" src="/assets/logo-white.svg" width="1000" height="680" alt="DentX Dental Lab">'
@@ -188,7 +203,8 @@ def lab_ld():
         "name": "DentX Dental Lab", "legalName": "DentX Dental Lab Inc", "url": SITE + "/",
         "logo": SITE + "/assets/logo.svg", "image": SITE + "/assets/og.jpg",
         "description": "Digital dental laboratory in Tarzana, California, serving dental offices nationwide. Zirconia and E.max crowns, veneers, implant crowns, dentures, partials and night guards. Free return shipping on digital cases, complimentary shade matching.",
-        "telephone": "+1-818-687-0085", "email": EMAIL, "priceRange": "$15–$250",
+        "telephone": "+1-818-687-0085", "email": EMAIL, "priceRange": "$15–$250", "foundingDate": "2008",
+        "founder": {"@type": "Person", "name": OWNER, "jobTitle": "Owner", "image": SITE + "/assets/owner-haibert.webp", "url": SITE + "/about/"},
         "address": {"@type": "PostalAddress", "streetAddress": "18401 Burbank Blvd #110", "addressLocality": "Tarzana",
                     "addressRegion": "CA", "postalCode": "91356", "addressCountry": "US"},
         "areaServed": [{"@type": "Country", "name": "United States"}, {"@type": "Place", "name": "San Fernando Valley, CA"}],
@@ -205,7 +221,7 @@ def crumbs_ld(path, name):
         {"@type": "ListItem", "position": 2, "name": name, "item": SITE + path}]}
 
 NAV = [("/zirconia-crowns/", "Crowns"), ("/implant-crowns/", "Implants"), ("/dentures-partials/", "Dentures"),
-       ("/nationwide-dental-lab/", "Shipping"), ("/#prices", "Prices")]
+       ("/nationwide-dental-lab/", "Shipping"), ("/#prices", "Prices"), ("/about/", "About")]
 
 def head(title, desc, path, ld, preload=None):
     pre = (f'<link rel="preload" as="image" href="/assets/{preload}" imagesrcset="/assets/{preload[:-5]}-480.webp 480w, /assets/{preload[:-5]}-800.webp 800w, /assets/{preload} 1400w" imagesizes="(max-width:980px) 92vw, 58vw" fetchpriority="high">' if preload else "")
@@ -286,6 +302,7 @@ def footer():
   <div class="contact-top">
     <div class="contact-mark">{svg_logo()}</div>
     <h2>Contact us <em>today.</em></h2>
+    <p class="contact-who"><img src="/assets/owner-haibert-480.webp" alt="" width="480" height="600" loading="lazy">You'll talk to Haibert directly.</p>
   </div>
   <div class="contact-row">
     <div class="contact-details">
@@ -414,6 +431,19 @@ def home():
       <p class="eyebrow">COMPLIMENTARY SHADE MATCHING</p>
       <h2>A shade<br><em>closer.</em></h2>
       <p>We match shade for every client. Send the tab reading or a photo under daylight. We do the rest.</p>
+    </div>
+  </section>
+
+  <section class="owner" id="owner">
+    <figure class="owner-photo">{img("owner-haibert", "Haibert Aivazian, owner of DentX Dental Lab, in the lab", "(max-width:980px) 92vw, 42vw", 'loading="lazy"', 1400, 1750)}</figure>
+    <div class="owner-copy">
+      <p class="eyebrow">MEET THE OWNER</p>
+      <h2>Haibert Aivazian.<br><em>Owner, at the bench.</em></h2>
+      <p>Haibert has been in business since 2008, and DentX is his lab. He's licensed, he works the bench himself, and he does the shade matching.</p>
+      <p>Big labs are built for volume, so your case becomes a ticket number. Haibert built DentX for offices that want to know who is making their crowns, and want that person to pick up the phone.</p>
+      <p>Shade is the part he won't hand off. Send a photo, or bring your patient by the Tarzana lab and he'll match it in person.</p>
+      <ul class="owner-facts"><li><strong>2008</strong>In business since</li><li><strong>Licensed</strong>Dental lab</li><li><strong>Free</strong>Shade matching, by Haibert</li></ul>
+      <div class="actions"><a class="btn btn-gold" href="tel:{PHONE_TEL}" data-ev="call">Call Haibert</a><a class="btn btn-ghost" href="/about/">About Haibert</a></div>
     </div>
   </section>
 
