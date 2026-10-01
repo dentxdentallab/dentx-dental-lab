@@ -113,3 +113,10 @@ document.querySelectorAll('.lazy-video').forEach(v => {
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) toggle(false); });
   document.body.append(btn, panel);
 })();
+
+// Sound toggle for the lab film (autoplay must start muted).
+document.querySelectorAll('.film .sound').forEach(b => b.addEventListener('click', () => {
+  const v = b.parentElement.querySelector('video'); v.muted = !v.muted;
+  b.setAttribute('aria-pressed', String(!v.muted)); b.textContent = v.muted ? 'Sound on' : 'Sound off';
+  if (!v.muted) v.play().catch(() => {});
+}));

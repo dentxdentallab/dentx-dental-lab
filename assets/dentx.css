@@ -249,3 +249,46 @@ body.inner{background:var(--navy);color:var(--white)}
 @media (max-width:680px){.qh-launch{bottom:84px;right:12px;height:44px}.qh-panel{right:12px;bottom:136px}}
 .form-status{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
 .form-note{font-size:12.5px;color:#8ea3c4;margin:0}
+.inside{grid-template-columns:.8fr 1.2fr}
+.film{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 0 0 1px #ffffff1f,0 40px 80px -30px #000c;background:#0d2a5e}
+.film video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.sound{position:absolute;right:14px;bottom:14px;font:500 13px var(--sans);color:#fff;background:#071a3dcc;border:1px solid #ffffff40;border-radius:999px;padding:8px 14px;cursor:pointer;backdrop-filter:blur(6px)}
+.sound[aria-pressed=true]{border-color:var(--gold)}
+
+/* ---------- motion & hero polish (2026) ---------- */
+/* hero: no tray; product floats in a soft spotlight with a blurred contact shadow */
+.tray,.tray-lip{display:none!important}
+.hero-product::before{content:'';position:absolute;left:8%;right:8%;top:-18%;bottom:6%;background:radial-gradient(ellipse 50% 60% at 50% 45%,rgba(214,178,94,.16),rgba(120,160,230,.08) 45%,transparent 72%);filter:blur(10px);z-index:0;pointer-events:none}
+.hero-product::after{content:'';position:absolute;left:22%;right:22%;bottom:4%;height:9%;background:radial-gradient(ellipse at center,rgba(1,8,24,.55),transparent 70%);filter:blur(14px);z-index:1;pointer-events:none}
+.hero-product img{position:relative;z-index:2}
+
+@media (prefers-reduced-motion:no-preference){
+  @keyframes dx-float{0%,100%{translate:0 0}50%{translate:0 -10px}}
+  @keyframes dx-shadow{0%,100%{opacity:1;scale:1}50%{opacity:.75;scale:.94}}
+  .hero-product img{animation:dx-float 7s cubic-bezier(.45,0,.55,1) infinite}
+  .hero-product::after{animation:dx-shadow 7s cubic-bezier(.45,0,.55,1) infinite}
+
+  /* hero text enters once, staggered (the bridge image is left alone for LCP) */
+  @keyframes dx-rise{from{opacity:0;translate:0 18px;filter:blur(6px)}to{opacity:1;translate:0 0;filter:blur(0)}}
+  .hero-title .eyebrow{animation:dx-rise .7s cubic-bezier(.22,1,.36,1) .05s both}
+  .hero-title h1{animation:dx-rise .9s cubic-bezier(.22,1,.36,1) .12s both}
+  .hero-copy h2{animation:dx-rise .9s cubic-bezier(.22,1,.36,1) .28s both}
+  .hero-copy p{animation:dx-rise .9s cubic-bezier(.22,1,.36,1) .4s both}
+  .hero-copy .actions{animation:dx-rise .9s cubic-bezier(.22,1,.36,1) .52s both}
+  .hero-bottom{animation:dx-rise .9s cubic-bezier(.22,1,.36,1) .7s both}
+
+  /* scroll reveals: native scroll-driven animations, content stays visible where unsupported */
+  @supports (animation-timeline:view()){
+    @keyframes dx-reveal{from{opacity:0;translate:0 28px}to{opacity:1;translate:0 0}}
+    .inside-copy,.film,.scanners>div,.section-heading,.ledger-head,.ledger table,.shipping-copy,.shipping-grid>div,
+    .shade-copy,.owner-photo,.owner-copy,.faq details,.lead-copy,.lead-form,.page-body>div,.page-img,.contact-top{
+      animation:dx-reveal linear both;animation-timeline:view();animation-range:entry 0% entry 45%}
+    .shade-photo img,.page-img img{animation:dx-zoom linear both;animation-timeline:view();animation-range:entry 0% cover 60%}
+    @keyframes dx-zoom{from{scale:1.08}to{scale:1}}
+    .bench-image img{animation:dx-zoom linear both;animation-timeline:view(inline);animation-range:entry 0% cover 50%}
+  }
+}
+/* tactile buttons */
+.btn:active{transform:translateY(0) scale(.98)}
+.bench .bench-label span{transition:transform .3s cubic-bezier(.22,1,.36,1)}
+.bench:hover .bench-label span{transform:translateX(4px)}
