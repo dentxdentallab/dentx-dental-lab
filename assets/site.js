@@ -48,3 +48,14 @@ document.querySelectorAll('.lead-form').forEach(form => {
     } finally { btn.disabled = false; }
   });
 });
+
+// Lazy-load the walkthrough video only when it scrolls into view (keeps first load fast).
+document.querySelectorAll('.lazy-video').forEach(v => {
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) { v.pause(); return; }
+    const s = v.querySelector('source[data-src]');
+    if (s) { s.src = s.dataset.src; s.removeAttribute('data-src'); v.load(); }
+    if (!matchMedia('(prefers-reduced-motion:reduce)').matches) v.play().catch(() => {});
+  }), { rootMargin: '200px' });
+  io.observe(v);
+});

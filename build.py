@@ -387,6 +387,17 @@ def home():
     <ol class="clock-track">{step_html}</ol>
   </section>
 
+  <section class="inside" id="inside">
+    <div class="inside-copy">
+      <p class="eyebrow">INSIDE THE LAB</p>
+      <h2>Walk through<br><em>the lab.</em></h2>
+      <p>Scan in, designed, milled, printed, stained and glazed by hand, then checked by Haibert before it ships. All in one lab in Tarzana.</p>
+      <div class="actions"><a class="btn btn-gold" href="/send-a-case/">Send a case</a><a class="btn btn-ghost" href="/about/">Meet Haibert</a></div>
+    </div>
+    <div class="phone"><video class="lazy-video" muted loop playsinline preload="none" poster="/assets/video/lab-poster.webp" width="540" height="960" aria-label="Walkthrough of the DentX dental lab: CAD design, milling, 3D printing, staining and glazing">
+      <source data-src="/assets/video/lab-9x16.mp4" type="video/mp4"></video></div>
+  </section>
+
   <section class="scanners">
     <div>
       <p class="eyebrow">WORKS WITH YOUR SCANNER</p>
