@@ -10,7 +10,7 @@ Static site, no server code, built for Vercel. Instagram/Google traffic → pric
 - `tools/og.html` → `assets/og.jpg` (link preview), rendered with headless Chrome.
 
 ## Pages
-`/` · `/zirconia-crowns/` · `/emax-crowns-veneers/` · `/implant-crowns/` · `/dentures-partials/` · `/nationwide-dental-lab/` · `/send-a-case/`
+`/` · `/zirconia-crowns/` · `/emax-crowns-veneers/` · `/implant-crowns/` · `/dentures-partials/` · `/nationwide-dental-lab/` · `/dental-lab-los-angeles/` · `/dental-lab-san-fernando-valley/` · `/digital-shade-matching/` · `/about/` · `/send-a-case/` (11 pages, all in `sitemap.xml`). `.vercelignore` keeps `README.md`, `build.py` and `tools/` out of the deployment.
 
 ## Lead form
 No server, no API. On submit the form builds the request and opens Messages (SMS to (818) 687-0085), with an email button as the alternative. Nothing is stored by the website. Vercel Web Analytics counts calls/texts/emails/leads/Quick help steps as events.
@@ -30,4 +30,4 @@ Lighthouse (mobile, compressed local server): home 100/100/100/100; inner pages 
 - Prices/turnaround from the lab's sheets in `../`; shipping terms from competitor research 2026-10-01 (see `../marketing/GROWTH_PLAN.md`).
 
 ## Owner to confirm
-Domain; margin on free FedEx 2Day return for single $75 crowns; Instagram handle; Meta Pixel ID; real case photos.
+Domain (then `SITE_URL=https://yourdomain.com python3 build.py`); Instagram handle; Meta Pixel ID; real case photos.

@@ -119,7 +119,7 @@ PAGES = {
         faq=[("How much is a denture?", "An acrylic denture is $180 and a printed denture is $160."),
              ("How long does a Valplast partial take?", "Bite block 6 business days, teeth try-in 7, final Valplast finish 12.")]),
     "/nationwide-dental-lab/": dict(
-        title="Nationwide Dental Lab with Free Return Shipping | DentX",
+        title="Nationwide Dental Lab | Free LA Pickup, $7 Return Shipping | DentX",
         desc="Send cases to DentX Dental Lab from anywhere in the U.S. Free pickup and delivery across LA County; elsewhere $7 per case to ship finished work back.",
         h1="Pickup in LA County.<br><em>Shipping everywhere else.</em>",
         lead="Our own driver covers Los Angeles County for free. Everywhere else, send your scan or impressions and we ship the finished work back for $7 per case.",
@@ -182,7 +182,7 @@ PAGES = {
         body=[
             ("Since 2008", "Haibert has been in business since 2008. In that time dentistry moved from impressions to intraoral scans, and DentX takes both."),
             ("Built for esthetics", "Haibert's focus is the work patients notice: anterior crowns and veneers with natural translucency, surface texture and the right value. Shade is measured with digital shade technology, not guessed with a tab. Patients are welcome at the Tarzana lab for a shade appointment."),
-            ("Why offices switch", "Big labs run on volume, so your case becomes a ticket number. DentX publishes its prices, quotes turnaround in business days, ships digital cases back free, and puts you on the phone with the owner."),
+            ("Why offices switch", "Big labs run on volume, so your case becomes a ticket number. DentX publishes its prices, quotes turnaround in business days, picks up and delivers free across LA County, and puts you on the phone with the owner."),
             ("Licensed and accountable", "DentX Dental Lab Inc is a licensed lab, owned and run by Haibert. If something about a case needs a second look, you call him and talk it through."),
         ],
         faq=[("Who owns DentX Dental Lab?", "Haibert Aivazian. He has been in business since 2008."),
@@ -565,7 +565,7 @@ def llms():
     for _, label, rows in CATALOG:
         lines.append(f"### {label}")
         lines += [f"- {n}: " + (f"{d} days, " if d else "") + p + (f" ({note})" if note else "") for n, note, d, p, _ in rows]
-    lines += ["", "## Pages", f"- Home: {SITE}/"] + [f"- {d['title'].split(' |')[0]}: {SITE}{p}" for p, d in PAGES.items()]
+    lines += ["", "## Pages", f"- [Home]({SITE}/)"] + [f"- [{d['title'].split(' |')[0]}]({SITE}{p})" for p, d in PAGES.items()]
     return "\n".join(lines) + "\n"
 
 def write(path, text):

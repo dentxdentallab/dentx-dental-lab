@@ -1,0 +1,4 @@
+# Keep source and internal notes out of the public deployment (repo root = Vercel output).
+README.md
+build.py
+tools/
