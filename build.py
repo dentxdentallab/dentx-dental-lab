@@ -319,6 +319,11 @@ def lead_form(title="Start your first case", sub="We reply the same business day
     <p class="eyebrow">NEW OFFICES</p>
     <h2>{title}</h2>
     <p>{sub}</p>
+    <ol class="lead-steps">
+      <li><b>Send this form</b> or call / text the lab. Takes 2 minutes.</li>
+      <li><b>We call you back the same business day</b> to connect your scanner or book your first pickup.</li>
+      <li><b>Send your first case</b> by scan, local pickup, or mail with a printed lab slip.</li>
+    </ol>
     <div class="lead-direct">
       <a class="btn btn-gold" href="tel:{PHONE_TEL}" data-ev="call">Call {PHONE}</a>
       <a class="btn btn-ghost" href="sms:{PHONE_TEL}" data-ev="text">Text the lab</a>
@@ -326,22 +331,24 @@ def lead_form(title="Start your first case", sub="We reply the same business day
     <p class="lead-slip"><a class="btn btn-ghost" href="/assets/dentx-lab-slip.pdf" target="_blank" rel="noopener" data-ev="lab_slip">Print lab slip (PDF)</a><br>Fill it in and send it with your impressions, or snap a photo and text it with your scan.</p>
   </div>
   <form class="lead-form" novalidate>
-    <label>Practice name<input name="practice" autocomplete="organization" required></label>
-    <label>Your name<input name="name" autocomplete="name" required></label>
+    <p class="form-req">All fields are required.</p>
+    <label>Practice name<input name="practice" autocomplete="organization" required minlength="2" data-err="Enter your practice name."></label>
+    <label>Your name<input name="name" autocomplete="name" required minlength="2" data-err="Enter your name."></label>
     <div class="row">
-      <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
-      <label>Email<input name="email" type="email" autocomplete="email"></label>
+      <label>Phone<input name="phone" type="tel" inputmode="tel" autocomplete="tel" required pattern="[^0-9]*([0-9][^0-9]*){{10,}}" data-err="Enter a phone number with area code."></label>
+      <label>Email<input name="email" type="email" inputmode="email" autocomplete="email" required data-err="Enter a valid email, like name@office.com."></label>
     </div>
     <div class="row">
-      <label>City, state<input name="location" autocomplete="address-level2"></label>
+      <label>City, state<input name="location" autocomplete="address-level2" required minlength="2" data-err="Enter your city and state."></label>
       <label>I'd like to
-        <select name="need">
+        <select name="need" required data-err="Choose what you need.">
+          <option value="" selected disabled>Choose one</option>
           <option>Send a digital case</option><option>Get a shipping label</option>
           <option>Schedule a local pickup</option><option>Get pricing / talk to the lab</option>
         </select>
       </label>
     </div>
-    <label>Notes <span>(no patient names)</span><textarea name="message" rows="3"></textarea></label>
+    <label>Notes <span>(case type, scanner, questions. No patient names)</span><textarea name="message" rows="3" required minlength="5" data-err="Tell us a little about what you need."></textarea></label>
     <label class="hp" aria-hidden="true">Leave empty<input name="company_site" tabindex="-1" autocomplete="off"></label>
     <button class="btn btn-gold" type="submit">Send request</button>
     <p class="form-note">Goes straight to the lab by text or email. Nothing is stored on this website.</p>

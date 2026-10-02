@@ -31,13 +31,28 @@ document.addEventListener('click', e => { const a = e.target.closest('[data-ev]'
 document.querySelectorAll('.lead-form').forEach(form => {
   const status = form.querySelector('.form-status');
   const tel = (window.DX && window.DX.tel) || '+18186870085';
+  const fields = [...form.querySelectorAll('[required]')];
+  // Inline error under each field (same look in every browser; native bubbles differ and vanish on phones).
+  const check = f => {
+    if (f.value.trim() !== f.value) f.value = f.value.trim();
+    const ok = f.checkValidity();
+    let m = f.parentElement.querySelector('.err');
+    if (!ok && !m) { m = Object.assign(document.createElement('small'), { className: 'err', id: f.name + '-err' }); f.after(m); }
+    if (m) m.textContent = ok ? '' : f.dataset.err;
+    f.toggleAttribute('aria-invalid', !ok);
+    if (!ok) f.setAttribute('aria-describedby', f.name + '-err');
+    return ok;
+  };
+  fields.forEach(f => f.addEventListener(f.tagName === 'SELECT' ? 'change' : 'blur', () => f.hasAttribute('aria-invalid') || f.value ? check(f) : 0));
+  fields.forEach(f => f.addEventListener('input', () => f.hasAttribute('aria-invalid') && check(f)));
   form.addEventListener('submit', e => {
     e.preventDefault();
-    if (!form.reportValidity()) return;
+    const bad = fields.filter(f => !check(f));
+    if (bad.length) { status.textContent = 'Please fill in every field.'; bad[0].focus(); return; }
     const d = Object.fromEntries(new FormData(form));
     if (d.company_site) return;
     const msg = [`New case request (website)`, `Practice: ${d.practice}`, `Name: ${d.name}`, `Phone: ${d.phone}`,
-      d.email && `Email: ${d.email}`, d.location && `Location: ${d.location}`, `Wants: ${d.need}`, d.message && `Notes: ${d.message}`].filter(Boolean).join('\n');
+      `Email: ${d.email}`, `Location: ${d.location}`, `Wants: ${d.need}`, `Notes: ${d.message}`].join('\n');
     const sep = /iPhone|iPad|Mac/.test(navigator.userAgent) ? '&' : '?';
     const smsHref = `sms:${tel}${sep}body=${encodeURIComponent(msg)}`;
     const mailHref = `mailto:Dentxdentallab@yahoo.com?subject=${encodeURIComponent('New case request: ' + d.practice)}&body=${encodeURIComponent(msg)}`;
