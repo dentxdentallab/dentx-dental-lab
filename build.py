@@ -323,6 +323,7 @@ def lead_form(title="Start your first case", sub="We reply the same business day
       <a class="btn btn-gold" href="tel:{PHONE_TEL}" data-ev="call">Call {PHONE}</a>
       <a class="btn btn-ghost" href="sms:{PHONE_TEL}" data-ev="text">Text the lab</a>
     </div>
+    <p class="lead-slip"><a class="btn btn-ghost" href="/assets/dentx-lab-slip.pdf" target="_blank" rel="noopener" data-ev="lab_slip">Print lab slip (PDF)</a><br>Fill it in and send it with your impressions, or snap a photo and text it with your scan.</p>
   </div>
   <form class="lead-form" novalidate>
     <label>Practice name<input name="practice" autocomplete="organization" required></label>
