@@ -3,14 +3,14 @@
 Static site, no server code, built for Vercel. Instagram/Google traffic → prices & turnaround → call / text / lead form.
 
 ## Edit & build
-- All prices, turnaround, shipping terms, FAQs and page copy live in `build.py` (one source → pages, JSON-LD, `llms.txt`, `sitemap.xml`, `robots.txt`).
+- Prices, turnaround, shipping terms and FAQs live in `build.py`; area pages, hubs and guides live in `content.py`. Both feed pages, JSON-LD, `llms.txt`, `sitemap.xml`, `robots.txt`.
 - `python3 build.py` regenerates everything. Set the real domain first: `SITE_URL=https://yourdomain.com python3 build.py`.
 - Styles: `assets/dentx.css` (DentX layer) on top of Codex's `assets/site.css` + `assets/scrollcraft.css`; all three are minified and inlined into each page at build.
 - Logo: `tools/logo.py` builds `assets/logo.svg`, `logo-white.svg`, `favicon.svg` as pure vector (Gilda Display + Montserrat outlines, drawn tooth ribbons). Needs fonttools and the two OFL fonts (download path in the script header).
 - `tools/og.html` → `assets/og.jpg` (link preview), rendered with headless Chrome.
 
 ## Pages
-`/` · `/zirconia-crowns/` · `/emax-crowns-veneers/` · `/implant-crowns/` · `/dentures-partials/` · `/nationwide-dental-lab/` · `/dental-lab-los-angeles/` · `/dental-lab-san-fernando-valley/` · `/digital-shade-matching/` · `/about/` · `/send-a-case/` (11 pages, all in `sitemap.xml`). `.vercelignore` keeps `README.md`, `build.py` and `tools/` out of the deployment.
+26 pages, grouped as Services, Areas we serve, The lab and Guides (see the site footer and `sitemap.xml`). `.vercelignore` keeps `README.md`, `build.py`, `content.py` and `tools/` out of the deployment. Off-site SEO steps for the owner: `../marketing/SEO-PLAN.md`.
 
 ## Lead form
 No server, no API. On submit the form builds the request and opens Messages (SMS to (818) 687-0085), with an email button as the alternative. Nothing is stored by the website. Vercel Web Analytics counts calls/texts/emails/leads/Quick help steps as events.

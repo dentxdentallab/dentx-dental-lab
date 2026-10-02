@@ -67,32 +67,35 @@ FAQ_HOME = [
 
 PAGES = {
     "/zirconia-crowns/": dict(
+        group="services", nav="Zirconia crowns",
         title="Zirconia Crowns Dental Lab | $75, 5 Business Days | DentX",
-        desc="Zirconia crowns from $75 in 5 business days. Layered zirconia $99. Free pickup and delivery across LA County, shipping nationwide. DentX Dental Lab, Tarzana CA.",
+        desc="Zirconia crowns from $75 in 5 business days, layered zirconia $99. Free pickup and delivery across LA County, shipping nationwide. DentX Dental Lab.",
         h1="Zirconia crowns.<br><em>Five days in the lab.</em>",
         lead="Monolithic zirconia from $75 and layered zirconia from $99, designed from your scan and matched with digital shade technology. Free pickup and delivery across LA County.",
         cats=["ceramic"], img="bench-ceramic.webp", img_alt="Ceramist layering porcelain on a zirconia crown beside the furnace",
         body=[
-            ("Monolithic or layered", "Monolithic zirconia for strength on posterior teeth and bruxers. Layered zirconia when the anterior needs more life in the incisal third. Shade is measured digitally, not guessed against a tab."),
+            ("Monolithic or layered", "Monolithic zirconia for strength on posterior teeth and bruxers. Layered zirconia when the anterior needs more life in the incisal third (see <a href=\"/guides/monolithic-vs-layered-zirconia/\">monolithic vs layered</a>). Shade is <a href=\"/digital-shade-matching/\">measured digitally</a>, not guessed against a tab."),
             ("From scan to finished crown", "Send from Medit, iTero, Shining 3D, DEXIS IOS Cloud or by STL. Up to 5 business days in the lab, counted from when your scan arrives with a complete Rx. In LA County our driver delivers it free; elsewhere it ships back for $7."),
             ("Temporaries and wax-ups", "PMMA temporary crowns are $45 in 5 business days. Diagnostic wax-ups are $25 in 4 business days."),
         ],
         faq=[("How much does a zirconia crown cost?", "A zirconia crown is $75. Layered zirconia is $99."),
              ("How long does a zirconia crown take?", "5 business days in the lab for monolithic zirconia, 6 for layered, counted from when the case arrives.")]),
     "/emax-crowns-veneers/": dict(
+        group="services", nav="E.max & veneers",
         title="E.max Crowns & Veneers Lab | From $85, 5 Days | DentX",
         desc="E.max crowns $85, veneers $99, inlays and onlays $75, all in up to 5 business days, with digital shade matching. DentX Dental Lab, Tarzana CA.",
         h1="E.max crowns <em>&amp;</em> veneers.",
         lead="Lithium disilicate crowns, veneers and inlays built for esthetics: natural translucency, characterized incisal edges, and shade matched digitally. Up to 5 business days in the lab.",
         cats=["ceramic"], img="hero.webp", img_alt="Glazed three-unit ceramic bridge",
         body=[
-            ("Anterior esthetics", "E.max crowns at $85 and veneers at $99 for cases where translucency matters. Layered E.max at $99 in 6 business days."),
+            ("Anterior esthetics", "E.max crowns at $85 and veneers at $99 for cases where translucency matters. Layered E.max at $99 in 6 business days. Not sure which material? Read <a href=\"/guides/zirconia-vs-emax/\">zirconia vs E.max</a>."),
             ("Conservative restorations", "Inlays and onlays at $75 in 5 business days. Diagnostic wax-ups at $25 to plan the case with your patient."),
             ("Shade, measured digitally", "No more guessing against a shade tab. Our digital shade system covers the full VITA range and bleach shades, so the color is measured, not eyeballed."),
         ],
         faq=[("How much is an E.max crown?", "An E.max crown is $85. Veneers are $99."),
              ("How long do veneers take?", "Veneers take 5 business days in the lab.")]),
     "/implant-crowns/": dict(
+        group="services", nav="Implant crowns",
         title="Implant Crowns & Custom Abutments Lab | DentX Dental Lab",
         desc="Screw-retained implant crowns $130, cement-retained $120, custom milled abutments $230, surgical guides $95. 5 business days. DentX Dental Lab ships nationwide.",
         h1="Implant crowns,<br><em>abutments &amp; guides.</em>",
@@ -106,20 +109,22 @@ PAGES = {
         faq=[("How much is an implant crown?", "Screw-retained implant crowns are $130 and cement-retained are $120."),
              ("Do you make custom abutments?", "Yes. Custom milled abutments are $230.")]),
     "/dentures-partials/": dict(
-        title="Dentures, Partials & Valplast Lab | From $160 | DentX",
-        desc="Acrylic dentures $180, printed dentures $160, metal partials and Valplast $230, combination $250, night guards $85, stayplates from $85 per arch. DentX Dental Lab.",
+        group="services", nav="Dentures & partials",
+        title="Denture Lab: Dentures, Partials, Valplast From $160 | DentX",
+        desc="Acrylic dentures $180, printed dentures $160, metal partials and Valplast $230, combination $250, night guards $85, stayplates from $85 per arch.",
         h1="Dentures, partials <em>&amp;</em> night guards.",
         lead="Acrylic and printed dentures, metal and Valplast partials, stayplates, night guards, relines and repairs, with stage-by-stage turnaround you can schedule patients around.",
         cats=["removable"], img="bench-removable.webp", img_alt="Complete dentures mounted on an articulator at the bench",
         body=[
             ("Dentures", "Acrylic dentures at $180: bite block 6 business days, teeth try-in 7, final finish 7. Printed dentures at $160 in 7 business days."),
             ("Partials", "Metal partials at $230 and Valplast at $230. Combination metal + Valplast at $250 in 12 business days."),
-            ("Same-week work", "Night guards (hard or soft) $85 in 3 business days. Repairs and relines $60 in 2 business days. Stayplates in 4 business days, or 2 with a $50 rush fee."),
+            ("Same-week work", "<a href=\"/night-guards/\">Night guards</a> (hard or soft) $85 in 3 business days. Repairs and relines $60 in 2 business days. Stayplates in 4 business days, or 2 with a $50 rush fee."),
         ],
         faq=[("How much is a denture?", "An acrylic denture is $180 and a printed denture is $160."),
              ("How long does a Valplast partial take?", "Bite block 6 business days, teeth try-in 7, final Valplast finish 12.")]),
     "/nationwide-dental-lab/": dict(
-        title="Nationwide Dental Lab | Free LA Pickup, $7 Return Shipping | DentX",
+        group="areas", nav="Nationwide shipping",
+        title="Nationwide Dental Lab | $7 Return Shipping | DentX",
         desc="Send cases to DentX Dental Lab from anywhere in the U.S. Free pickup and delivery across LA County; elsewhere $7 per case to ship finished work back.",
         h1="Pickup in LA County.<br><em>Shipping everywhere else.</em>",
         lead="Our own driver covers Los Angeles County for free. Everywhere else, send your scan or impressions and we ship the finished work back for $7 per case.",
@@ -133,13 +138,14 @@ PAGES = {
         faq=[("Do you ship to other states?", "Yes. DentX ships to dental offices across the United States."),
              ("Who pays for shipping?", "In LA County, nobody: pickup and delivery are free. Outside LA County, shipping finished work back is $7 per case, and inbound labels for impressions are billed at the carrier's cost.")]),
     "/dental-lab-los-angeles/": dict(
-        title="Dental Lab in Los Angeles | Free Pickup & Delivery in LA County | DentX",
-        desc="Full-service dental lab serving Los Angeles County with free pickup and delivery by our own driver. Zirconia $75, E.max $85, implants, dentures. Up to 5 business days.",
+        group="areas", nav="Los Angeles",
+        title="Dental Lab in Los Angeles | Free Pickup & Delivery | DentX",
+        desc="Dental lab serving all of Los Angeles County with free pickup and delivery by our own driver. Zirconia $75, E.max $85, implants, dentures. 5 business days.",
         h1="The dental lab for<br><em>Los Angeles offices.</em>",
         lead="Our own driver picks up and delivers across Los Angeles County, free. Call or text before 12 pm and we'll do our best to pick up the same day.",
         cats=["ceramic"], img="bench-ceramic.webp", img_alt="Ceramist finishing a crown at the DentX lab in Tarzana",
         body=[
-            ("Where we pick up", "All of Los Angeles County, including Los Angeles, Beverly Hills, Santa Monica, Burbank, Glendale, Pasadena, Encino, Sherman Oaks, Woodland Hills, Calabasas, Northridge, Long Beach and Torrance."),
+            ("Where we pick up", "All of Los Angeles County, including Beverly Hills, Santa Monica, <a href=\"/dental-lab-burbank/\">Burbank</a>, <a href=\"/dental-lab-glendale/\">Glendale</a>, Pasadena, <a href=\"/dental-lab-encino/\">Encino</a>, <a href=\"/dental-lab-sherman-oaks/\">Sherman Oaks</a>, <a href=\"/dental-lab-woodland-hills/\">Woodland Hills</a>, Calabasas, Northridge, Long Beach and Torrance."),
             ("What we make", "Zirconia and E.max crowns, veneers, implant crowns and custom abutments, dentures, partials, Valplast and night guards. Every price is published on this site."),
             ("How fast", "Up to 5 business days in the lab for crowns and veneers, counted from when your case arrives with a complete Rx. Dentures go by stage."),
             ("Why LA offices choose DentX", "A lab owner on the phone, digital shade matching instead of guessing with a tab, and a driver who comes to you."),
@@ -147,21 +153,23 @@ PAGES = {
         faq=[("Do you pick up in Los Angeles?", "Yes. Pickup and delivery are free anywhere in Los Angeles County."),
              ("How do I schedule a pickup?", "Call or text (818) 687-0085. Before 12 pm we do our best to pick up the same day.")]),
     "/dental-lab-san-fernando-valley/": dict(
-        title="Dental Lab in the San Fernando Valley | Tarzana | DentX Dental Lab",
-        desc="DentX Dental Lab in Tarzana serves San Fernando Valley dental offices with free pickup and delivery: Encino, Sherman Oaks, Woodland Hills, Van Nuys, Northridge, Studio City.",
+        group="areas", nav="San Fernando Valley",
+        title="San Fernando Valley Dental Lab in Tarzana | DentX",
+        desc="Dental lab in Tarzana with free pickup and delivery for San Fernando Valley offices: Encino, Sherman Oaks, Woodland Hills, Van Nuys, Northridge.",
         h1="Your Valley<br><em>dental lab.</em>",
         lead="We're on Burbank Blvd in Tarzana, minutes from your office. Free pickup and delivery across the Valley and all of LA County.",
         cats=["ceramic", "removable"], img="bench-removable.webp", img_alt="Dentures on an articulator at the DentX lab bench in Tarzana",
         body=[
-            ("Close by", "Tarzana, Encino, Sherman Oaks, Woodland Hills, Reseda, Van Nuys, Northridge, Studio City, North Hollywood, Calabasas and the rest of the Valley."),
+            ("Close by", "Tarzana, <a href=\"/dental-lab-encino/\">Encino</a>, <a href=\"/dental-lab-sherman-oaks/\">Sherman Oaks</a>, <a href=\"/dental-lab-woodland-hills/\">Woodland Hills</a>, Reseda, <a href=\"/dental-lab-van-nuys/\">Van Nuys</a>, Northridge, Studio City, North Hollywood, Calabasas and the rest of the Valley."),
             ("Same-day pickup", "Call or text before 12 pm and our driver will do our best to pick up the same day. Delivery of finished work is free too."),
             ("Bring the patient", "For esthetic anterior cases, patients are welcome at the lab for a digital shade appointment."),
         ],
         faq=[("Where is DentX Dental Lab?", f"{ADDR}, open {HOURS}."),
              ("Do you deliver in the Valley?", "Yes, free, by our own driver, across the San Fernando Valley and all of LA County.")]),
     "/digital-shade-matching/": dict(
-        title="Digital Shade Matching for Crowns & Veneers | DentX Dental Lab",
-        desc="DentX measures shade digitally with a system that holds the full VITA range and bleach shades, so crowns and veneers match the natural teeth. Esthetic lab in Tarzana, CA.",
+        group="services", nav="Digital shade matching",
+        title="Digital Shade Matching for Crowns & Veneers | DentX",
+        desc="DentX measures shade digitally across the full VITA range and bleach shades, so crowns and veneers match the natural teeth. Esthetic dental lab in Tarzana, CA.",
         h1="Shade,<br><em>measured digitally.</em>",
         lead="A shade tab held up to a tooth depends on the light in the room and the eye of whoever holds it. We measure shade digitally instead.",
         cats=[], img="shade.webp", img_alt="Ceramic crown compared for shade under daylight",
@@ -174,8 +182,9 @@ PAGES = {
         faq=[("Is digital shade matching extra?", "No. It's how every case is shade-matched at DentX."),
              ("Which shade systems do you cover?", "The full VITA range and bleach shades.")]),
     "/about/": dict(
-        title="About Haibert Aivazian, Owner of DentX Dental Lab | Tarzana, CA",
-        desc="Meet Haibert Aivazian, licensed owner of DentX Dental Lab, in business since 2008. Esthetic crown and bridge, digital shade matching, published prices. Tarzana, CA.",
+        group="lab", nav="About Haibert",
+        title="Haibert Aivazian, Owner of DentX Dental Lab | Tarzana",
+        desc="Meet Haibert Aivazian, licensed owner of DentX Dental Lab, in business since 2008. Esthetic crown and bridge, digital shade matching, published prices.",
         h1="Meet Haibert Aivazian.<br><em>Owner of DentX.</em>",
         lead="Licensed, in business since 2008, and still at the bench. When you send a case to DentX, you know whose hands it's in.",
         cats=[], img="owner-haibert.webp", img_alt="Haibert Aivazian, owner of DentX Dental Lab, in DentX scrubs",
@@ -188,19 +197,25 @@ PAGES = {
         faq=[("Who owns DentX Dental Lab?", "Haibert Aivazian. He has been in business since 2008."),
              ("Can a patient come in for a shade match?", "Yes. Call (818) 687-0085 to set a time at the Tarzana lab.")]),
     "/send-a-case/": dict(
+        group="lab", nav="Send a case",
         title="Send a Case to DentX Dental Lab | Scan, Ship or Pickup",
         desc="Send your first case to DentX Dental Lab: connect Medit, iTero, Shining 3D or DEXIS, email an STL, or request a pickup or shipping label. Call (818) 687-0085.",
         h1="Send your <em>first case.</em>",
         lead="Tell us how you work and we'll set you up the same day: scanner connection, shipping label or local pickup.",
         cats=[], img=None, img_alt="",
         body=[
-            ("Scanning digitally?", "We receive from Medit, iTero, Shining 3D and DEXIS IOS Cloud, or STL by email. Call the lab and we'll walk you through connecting your scanner account to DentX."),
-            ("Every case needs an Rx", "Service, teeth, shade and due date. If something is missing we call your office first, and the 5 business days start once the Rx is complete."),
+            ("Scanning digitally?", "We receive from Medit, iTero, Shining 3D and DEXIS IOS Cloud, or STL by email (<a href=\"/digital-dental-lab/\">digital cases</a>). Call the lab and we'll walk you through connecting your scanner account to DentX."),
+            ("Every case needs an Rx", "Service, teeth, shade and due date (see the <a href=\"/guides/dental-lab-rx-checklist/\">Rx checklist</a>). Print the <a href=\"/assets/dentx-lab-slip.pdf\">DentX lab slip</a>. If something is missing we call your office first, and the 5 business days start once the Rx is complete."),
             ("Sending impressions from outside LA County?", "Request a label below and we'll email a prepaid one, billed at the carrier's cost. Finished work ships back for $7 per case."),
             ("In LA County?", "Call or text before 12 pm and our driver will do their best to pick up the same day. Free."),
         ],
         faq=[]),
 }
+
+from content import city_pages, EXTRA, EXTRA_BODY
+for _p, _secs in EXTRA_BODY.items(): PAGES[_p]["body"] += _secs
+PAGES.update(city_pages()); PAGES.update(EXTRA)
+GROUPS = [("services", "Services"), ("areas", "Areas we serve"), ("lab", "The lab"), ("guides", "Guides")]
 
 # ---------------------------------------------------------------- helpers
 def _min(css):
@@ -266,9 +281,26 @@ def faq_ld(items):
             "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in items]}
 
 def crumbs_ld(path, name):
+    trail = [("DentX Dental Lab", "/")] + ([("Guides", "/guides/")] if path.startswith("/guides/") and path != "/guides/" else []) + [(name, path)]
     return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "DentX Dental Lab", "item": SITE + "/"},
-        {"@type": "ListItem", "position": 2, "name": name, "item": SITE + path}]}
+        {"@type": "ListItem", "position": i, "name": n, "item": SITE + u} for i, (n, u) in enumerate(trail, 1)]}
+
+def page_ld(path, d, name):
+    """Article for guides, Service for service and area pages (provider = the lab)."""
+    if d.get("kind") == "guide":
+        return {"@context": "https://schema.org", "@type": "Article", "headline": d["title"].split(" |")[0], "description": d["desc"],
+                "url": SITE + path, "datePublished": TODAY, "dateModified": TODAY, "inLanguage": "en-US",
+                "author": {"@type": "Person", "name": OWNER, "url": SITE + "/about/"},
+                "publisher": {"@id": SITE + "/#lab"}, "image": SITE + "/assets/og.jpg", "mainEntityOfPage": SITE + path}
+    if d.get("group") in ("services", "areas"):
+        city = d["nav"] if path.startswith("/dental-lab-") and d["nav"] not in ("Los Angeles", "San Fernando Valley") else None
+        return {"@context": "https://schema.org", "@type": "Service", "name": d["title"].split(" |")[0], "description": d["desc"],
+                "url": SITE + path, "serviceType": "Dental laboratory", "provider": {"@id": SITE + "/#lab"},
+                "areaServed": {"@type": "City", "name": f"{city}, CA"} if city else {"@type": "AdministrativeArea", "name": "Los Angeles County, CA"}}
+    return None
+
+def clean(h):
+    return h.replace("<br>", " ").replace("<em>", "").replace("</em>", "").replace("&amp;", "&")
 
 NAV = [("/zirconia-crowns/", "Crowns"), ("/implant-crowns/", "Implants"), ("/dentures-partials/", "Dentures"),
        ("/nationwide-dental-lab/", "Shipping"), ("/#prices", "Prices"), ("/about/", "About")]
@@ -357,7 +389,7 @@ def lead_form(title="Start your first case", sub="We reply the same business day
 </section>"""
 
 def footer():
-    links = "".join(f'<a href="{p}">{e(d["h1"].replace("<br>", " ").replace("<em>", "").replace("</em>", "").replace("&amp;", "&"))}</a>' for p, d in PAGES.items())
+    links = "".join(f'<div><h3>{label}</h3>' + "".join(f'<a href="{p}">{e(d["nav"])}</a>' for p, d in PAGES.items() if d["group"] == g) + "</div>" for g, label in GROUPS)
     return f"""<section class="close" id="contact">
   <div class="contact-top">
     <div class="contact-mark">{svg_logo()}</div>
@@ -375,7 +407,7 @@ def footer():
   </div>
   <footer class="footer">
     <span>DentX Dental Lab Inc · Tarzana, CA · {HOURS} · Free pickup &amp; delivery in LA County</span>
-    <nav aria-label="Footer">{links}</nav>
+    <nav class="footer-groups" aria-label="Footer">{links}</nav>
   </footer>
 </section>
 <div class="mobile-bar">
@@ -406,8 +438,8 @@ def home():
              ("Delivery", "To your office", "Free by our driver in LA County, $7 shipping elsewhere.")]
     step_html = "".join(f'<li><span class="day">{d}</span><h3>{t}</h3><p>{p}</p></li>' for d, t, p in steps)
     ld = [lab_ld(), faq_ld(FAQ_HOME)]
-    return head("DentX Dental Lab | Zirconia, E.max, Implants &amp; Dentures · Ships Nationwide",
-                "Premium dental lab in Tarzana, CA shipping nationwide. Zirconia crowns $75 and E.max $85 in up to 5 business days, free pickup and delivery across LA County, digital shade matching.",
+    return head("DentX Dental Lab | Los Angeles Dental Lab, Ships Nationwide",
+                "Dental lab in Tarzana, CA: zirconia $75, E.max $85 in up to 5 business days. Free pickup and delivery across LA County, shipping nationwide.",
                 "/", ld, preload="hero.webp") + f"""
 <body class="home">
 {header()}
@@ -471,7 +503,7 @@ def home():
   <section class="ledger light" id="prices">
     <div class="ledger-head">
       <div><p class="eyebrow dark">TURNAROUND &amp; PRICES</p><h2>The date it<br><em>comes back.</em></h2></div>
-      <p>Business days in the lab, counted from when your scan or case arrives. Published, so you can quote patients with confidence.</p>
+      <p>Business days in the lab, counted from when your scan or case arrives. Published, so you can quote patients with confidence. <a class="inline-link" href="/dental-lab-price-list/">Full price list →</a></p>
     </div>
     <div class="ledger-grid"><div>{ledger(["ceramic", "implant"])}</div><div>{ledger(["removable"])}</div></div>
   </section>
@@ -480,7 +512,7 @@ def home():
     <div class="shipping-copy">
       <p class="eyebrow">SHIPPING NATIONWIDE</p>
       <h2>Wherever your<br><em>chair is.</em></h2>
-      <a class="inline-link" href="/nationwide-dental-lab/">How shipping works →</a>
+      <a class="inline-link" href="/nationwide-dental-lab/">How shipping works →</a> <a class="inline-link" href="/dental-lab-los-angeles/">Areas we serve →</a>
     </div>
     <div class="shipping-grid">{ship}</div>
   </section>
@@ -519,29 +551,31 @@ def home():
 
 # ---------------------------------------------------------------- inner pages
 def page(path, d):
-    name = d["h1"].replace("<br>", " ").replace("<em>", "").replace("</em>", "").replace("&amp;", "&")
-    ld = [lab_ld(), crumbs_ld(path, name)] + ([faq_ld(d["faq"])] if d["faq"] else [])
-    body = "".join(f"<div><h2>{e(t)}</h2><p>{e(p)}</p></div>" for t, p in d["body"])
+    name = clean(d["h1"])
+    ld = [lab_ld(), crumbs_ld(path, name)] + [x for x in [page_ld(path, d, name)] if x] + ([faq_ld(d["faq"])] if d["faq"] else [])
+    body = "".join(f"<div><h2>{e(t)}</h2><p>{p}</p></div>" for t, p in d["body"])  # trusted HTML (inline links)
     pic = ""
     if d["img"]:
         portrait = d["img"].startswith("owner-")
         pic = (f'<figure class="page-img{" portrait" if portrait else ""}">' + img(d["img"][:-5], e(d["img_alt"]), "(max-width:680px) 92vw, 520px" if portrait else "(max-width:1100px) 92vw, 1100px", 'fetchpriority="high"', *((1086, 1448) if portrait else (1400, 933))) + "</figure>")
     prices = (f'<section class="ledger light"><div class="ledger-head"><div><p class="eyebrow dark">TURNAROUND &amp; PRICES</p><h2>Published <em>prices.</em></h2></div></div><div class="ledger-one">{ledger(d["cats"])}</div></section>' if d["cats"] else "")
     ship = "".join(f"<div><h3>{a}</h3><p>{b}</p></div>" for a, b in SHIP)
-    related = "".join(f'<a href="{p}">{e(x["h1"].replace("<br>", " ").replace("<em>", "").replace("</em>", "").replace("&amp;", "&"))} →</a>' for p, x in PAGES.items() if p != path)
+    near = [p for p, x in PAGES.items() if x["group"] == d["group"] and p != path][:8]
+    keys = [p for p in ("/dental-lab-price-list/", "/send-a-case/", "/zirconia-crowns/", "/guides/") if p != path and p not in near]
+    related = "".join(f'<a href="{p}">{e(PAGES[p]["nav"])} →</a>' for p in near + keys)
     faq = (f'<section class="faq light"><div class="faq-list">{faq_html(d["faq"])}</div></section>' if d["faq"] else "")
     return head(d["title"], d["desc"], path, ld, preload=d["img"]) + f"""
 <body class="inner">
 {header()}
 <main id="main">
   <section class="page-hero">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">DentX Dental Lab</a> / <span>{e(name)}</span></nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">DentX Dental Lab</a> / {'<a href="/guides/">Guides</a> / ' if path.startswith("/guides/") and path != "/guides/" else ""}<span>{e(name)}</span></nav>
     <h1>{d["h1"]}</h1>
     <p class="page-lead">{e(d["lead"])}</p>
     <div class="actions"><a class="btn btn-gold" href="#start">Send a case</a><a class="btn btn-ghost" href="tel:{PHONE_TEL}" data-ev="call">Call {PHONE}</a></div>
     {pic}
   </section>
-  <section class="page-body light">{body}</section>
+  <section class="page-body light{" article" if d.get("kind") == "guide" else ""}">{body}</section>
   {prices}
   <section class="shipping"><div class="shipping-copy"><p class="eyebrow">SHIPPING NATIONWIDE</p><h2>Wherever your<br><em>chair is.</em></h2></div><div class="shipping-grid">{ship}</div></section>
   {faq}
@@ -561,7 +595,9 @@ def llms():
     for _, label, rows in CATALOG:
         lines.append(f"### {label}")
         lines += [f"- {n}: " + (f"{d} days, " if d else "") + p + (f" ({note})" if note else "") for n, note, d, p, _ in rows]
-    lines += ["", "## Pages", f"- [Home]({SITE}/)"] + [f"- [{d['title'].split(' |')[0]}]({SITE}{p})" for p, d in PAGES.items()]
+    lines += ["", "## Pages", f"- [Home]({SITE}/)"]
+    for g, label in GROUPS:
+        lines += ["", f"### {label}"] + [f"- [{d['title'].split(' |')[0]}]({SITE}{p}): {d['desc']}" for p, d in PAGES.items() if d["group"] == g]
     return "\n".join(lines) + "\n"
 
 def write(path, text):

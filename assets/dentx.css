@@ -302,3 +302,10 @@ body.inner{background:var(--navy);color:var(--white)}
 .lead-form [aria-invalid]{border-color:#e98b8b}
 .lead-form select:invalid{color:#8ea3c4}
 .lead-form input,.lead-form select,.lead-form textarea{min-width:0;max-width:100%}
+.page-body.article{display:block;padding-left:max(var(--gutter),calc((100% - 820px)/2));padding-right:max(var(--gutter),calc((100% - 820px)/2))}
+.page-body.article>div+div{margin-top:44px}
+.page-body a{color:#0d2a5e;text-decoration:underline;text-decoration-color:#c9a45c;text-underline-offset:3px}
+.page-body a:hover{text-decoration-color:currentColor}
+.footer-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:26px 32px;width:100%;margin:22px 0 0}
+.footer-groups h3{font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#8ea3c4;margin:0 0 12px}
+.footer-groups a{display:block;padding:4px 0}

@@ -2,3 +2,5 @@
 README.md
 build.py
 tools/
+content.py
+__pycache__/
